@@ -56,7 +56,7 @@ def compute_average_difference(tensors):
 
 
 # Path to your text file
-output_file_path = '/path/to/your/output/file'
+output_file_path = '3b_796m_shortened.txt'
 
 # Read the tensors from the file
 tensors = read_tensors_from_file(output_file_path)

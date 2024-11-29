@@ -1,3 +1,5 @@
+##### CODE ADAPTED FROM: https://github.com/uw-mad-dash/decoding-speculative-decoding/blob/main/spec_decoding_deployment.py #####
+
 import torch
 import torch.nn as nn
 import re
@@ -51,7 +53,6 @@ def rewrite_embedding(model_name, save_path):
 
     print("done")
 
-
 def oracle_verification(model, input_tensor, max_new_tokens, local_rank, iter_count, past_key_values):
     """
     Verifies the predictions of an oracle model by comparing the generated tokens against actual tokens.
@@ -82,62 +83,65 @@ def oracle_verification(model, input_tensor, max_new_tokens, local_rank, iter_co
         outputs = model(input_tensor.unsqueeze(0).cuda(local_rank), past_key_values=past_key_values, use_cache=True)
         new_past_key_values = outputs.past_key_values
         next_token_id = outputs.logits[:, :, :].argmax(dim=-1, keepdim=False)
-
+    
+    print()
+    print("ORACLE VERIFICATION FUNCTION")
+    print("new_past_key_values size: ")
+    print(len(new_past_key_values))
+    print(len(new_past_key_values[0]))
+    print(new_past_key_values[0][0].size())
+    # for i, layer_past_key_value in enumerate(new_past_key_values):
+    #     print(f"Layer {i} size: {layer_past_key_value.size()}")
+    print("next_token_id: ", next_token_id)
 
     # Extract the actual next tokens from the input tensor
     actual_next_tokens_tensor = input_tensor[-max_new_tokens:]
+
+    print("actual_next_tokens_tensor: ", actual_next_tokens_tensor)
 
     # Compare the predicted next tokens with the actual next tokens
     correct_predictions = (next_token_id == actual_next_tokens_tensor)
 
     # Convert the boolean tensor to a float tensor for further processing
-    correct_predictions_float = correct_predictions.float()[0]
+    correct_predictions_float = correct_predictions.float()
+
+    print("correct predictions: ", correct_predictions_float)
 
     # Initialize a tensor to hold the positions of the first incorrect prediction in each row
+    
+    # Find the position of the first incorrect token
+    first_false_position = torch.where(~correct_predictions)[1].min(dim=-1, keepdim=True).values if not correct_predictions.all() else torch.full_like(correct_predictions[0], max_new_tokens)
+    # first_false_positions = torch.full((correct_predictions_float.size(0),), correct_predictions_float.size(1),
+    #                                device=correct_predictions_float.device)
     # first_false_positions = torch.full((correct_predictions_float.size(0),), correct_predictions_float.size(1),
     #                                    device=correct_predictions_float.device)
-
-    ### batch size is always 1 ###'
-    print("Compare")
-    first_incorrect_index_array = (correct_predictions_float == 0).nonzero()
-    print("incorrect array: ", first_incorrect_index_array)
-    if len(first_incorrect_index_array) > 0:
-        first_incorrect_index = (correct_predictions_float == 0).nonzero()[0].item()
-        print("first incorrect: ", first_incorrect_index)
-    else:
-        first_incorrect_index = len(correct_predictions_float)
-        print("no incorrect: ", first_incorrect_index)
-
-    print("next token id: ", next_token_id)
-    print("actual next token: ", actual_next_tokens_tensor)
-    print("correct predictions: ", next_token_id == actual_next_tokens_tensor)
-    print("correct_prediction_float: ", correct_predictions_float)
-
-    first_false_positions = torch.full((1,), first_incorrect_index,
-                                       device=correct_predictions_float.device)
-    print("first false positions: ", first_false_positions)
-
-    print(max_new_tokens)
-    print(first_incorrect_index)
-    print(type(new_past_key_values))
-    print(len(new_past_key_values))
-    print(type(new_past_key_values[0]))
-    print(len(new_past_key_values[0]))
-    print(type(new_past_key_values[0][0]))
-    print(len(new_past_key_values[0][0]))
+    
+    print("first false position: ", first_false_position)
 
     # Check if there's any incorrect prediction within the max_new_tokens limit and adjust past_key_values accordingly
-    if first_false_positions < max_new_tokens:
-        adjusted_past_key_values = tuple(
-            (
-                key[:, :, :-max_new_tokens + first_incorrect_index, :],
-                value[:, :, :-max_new_tokens + first_incorrect_index, :]
-            )
-            for key, value in new_past_key_values
-        )
-        return first_false_positions, adjusted_past_key_values
+    if first_false_position < max_new_tokens:
+        updated_past_key_values = []
 
-    return first_false_positions, new_past_key_values
+        for layer_idx in range(len(new_past_key_values)):
+            new_key_tensor = new_past_key_values[layer_idx][0][:, :, :-max_new_tokens + first_false_position, :]
+            new_value_tensor = new_past_key_values[layer_idx][1][:, :, :-max_new_tokens + first_false_position, :]
+            
+            updated_layer_tuple = (new_key_tensor, new_value_tensor)
+
+            updated_past_key_values.append(updated_layer_tuple)
+            # new_past_key_values[layer_idx] = (
+            #     new_past_key_values[layer_idx][0][:, :, :-max_new_tokens + first_false_position, :],
+            #     new_past_key_values[layer_idx][1][:, :, :-max_new_tokens + first_false_position, :]
+            # )
+
+        print("updated key value size: ")
+        print(len(new_past_key_values))
+        print(len(new_past_key_values[0]))
+        print(new_past_key_values[0][0].size())
+
+        return first_false_position, tuple(updated_past_key_values)
+
+    return first_false_position, new_past_key_values
 
 
 if __name__ == "__main__":
@@ -148,9 +152,6 @@ if __name__ == "__main__":
     torch.cuda.set_device(local_rank)
     device = torch.device("cuda", local_rank)
 
-    # Set your target LLM and desired tp degrees here.
-    model_name = "llama-3_2-3b"
-
     print(world_size, rank, local_rank)
     os.environ['TRANSFORMERS_CACHE'] = "cache"  # Replace with your transformers cache directory
 
@@ -160,6 +161,10 @@ if __name__ == "__main__":
     # rewrite_embedding(model_name='meta-llama/Llama-3.2-3B', save_path='llama-3_2-3b')
 
     torch.cuda.empty_cache()
+
+    # Set your target LLM and desired tp degrees here.
+    model_name = "llama-3_2-3b"
+    # tensor_parallel_degrees = 4
 
     # Load the model on meta tensors from the config file.
     # This prevents deepspeed from loading models multiple times on each rank.
@@ -196,7 +201,8 @@ if __name__ == "__main__":
 
     # The LLaMA tokenizer does not have a pad token.
     # Modify the tokenizer to add a pad token and change the model configs accordingly.
-    tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side="left", torch_dtype=torch.float16)
+    tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side="left",
+                                              torch_dtype=torch.float16)
     tokenizer.pad_token = "[PAD]"
 
     # Feel free to change it to the draft model of your choice
@@ -216,122 +222,86 @@ if __name__ == "__main__":
         # checkpoint=checkpoint_dict,
     )
 
-    current_prompts = []
-    curr_count = 0
-    past_key_values = None
-
     # Set hyperparameters for speculative decoding
     batch_size = 1
     max_new_tokens = 7
     output_file = "3b_796m_shortened.txt"
+    past_key_values = None
 
-    processed_batches = 0
+    print(draft_model.config)
+    print(draft_model.config.vocab_size)
+
+    print("Pad token ID: ", tokenizer.pad_token_id)
+    print("Eos token ID: ", tokenizer.eos_token_id)
+
+    iteration = 0
     for batch in test_json:
-        processed_batches += 1
+        if iteration == 0:
+            current_prompt = batch["prompt"]
 
-        # Adding the prompt from the current batch to a list for processing
-        current_prompts.append(batch['prompt'])
+            print("Current prompt: ", current_prompt)
 
-        print()
-        print("Current prompts: ", current_prompts)
+            draft_input_ids = tokenizer.encode(current_prompt, return_tensors="pt").cuda(local_rank)
 
-        # Keeping track of how many prompts have been processed
-        curr_count += 1
-        if curr_count == batch_size:
-            # If the current count reaches the batch size, encode the batch of prompts
-            draft_input_ids = tokenizer.batch_encode_plus(current_prompts, padding='longest')
-            # Reset the prompts list and count for the next batch
-            current_prompts = []
-            curr_count = 0
+            print("Number of draft ids: ", draft_input_ids.size())
 
             # Calculating the maximum length for the generated sequence
             max_length = 200 - max_new_tokens - 2
             current_length = 0
             iter_count = 0
 
-            # Initializing a tensor to keep track of total matched tokens
-            total_matched = torch.zeros(batch_size, dtype=torch.int32).cuda(local_rank)
+            # Intialize tensor to keep track of total matched tokens
+            total_matched = torch.zeros(1, dtype=torch.int32).cuda(local_rank)
 
-            # Generating sequences up to the max length
-            while current_length < max_length:
-                if iter_count == 0:
-                    # For the first iteration, use the input prompt
-                    iter_count += 1
-                    output_len = len(draft_input_ids["input_ids"][0]) + max_new_tokens
-                    input_tensors = torch.tensor(draft_input_ids["input_ids"]).cuda(local_rank)
-                else:
-                    # For subsequent iterations, use new inputs based on matched tokens
-                    output_len = len(new_inputs[0]) + max_new_tokens
-                    input_tensors = new_inputs
-                    if batch_size == 1:
-                        input_tensors.unsqueeze(0)
+            # while current_length < max_length:
+            print("Iteration: ", current_length, max_length)
 
-                # Generating predictions using the draft models if the local rank is within the models' range
-                padded_tensor = draft_model.generate(input_tensors, max_new_tokens=max_new_tokens,
-                                                                  pad_token_id=tokenizer.eos_token_id).to(dtype=torch.int32)
+            if iter_count == 0: 
+                # For the first iteration, use the input prompt
+                iter_count += 1
+                input_tensor = draft_input_ids
+            else: 
+                # For subsequent iterations, use new inputs based on matched tokens
+                input_tensor = new_inputs
 
-                print("Padded tensor: ")
-                print(len(padded_tensor[0]))
-                print(padded_tensor[0])
+            print("Input tensor size: ", input_tensor.size(1))
 
-                # Gathering predictions from all devices in a distributed setting
-                gathered_padded_tensors = [torch.zeros(output_len, dtype=torch.int32).cuda(local_rank) for _ in
-                                           range(world_size)]
-                dist.all_gather(gathered_padded_tensors, padded_tensor.int())
-                cat_tensor = gathered_padded_tensors[0]
+            output_len = input_tensor.size(1) + max_new_tokens
 
-                # Trimming the concatenated tensor if beyond the first iteration
-                if iter_count > 1:
-                    cat_tensor = cat_tensor[-max_new_tokens:]
+            # Generate predictions
+            generated_tokens = draft_model.generate(input_tensor, max_new_tokens=max_new_tokens,
+                                                                pad_token_id=tokenizer.eos_token_id).to(dtype=torch.int32)
 
-                print("Cat tensor: ")
-                print(len(cat_tensor))
-                print(cat_tensor)
+            print("Generated tokens: ", generated_tokens)
 
+            outputs = oracle_model(generated_tokens)
+            logits = outputs.logits
+            print("Logits from target: ", logits)
 
-                # Verifying the generated sequence against the ground truth
-                first_false_positions, past_key_values = oracle_verification(oracle_model, cat_tensor, max_new_tokens,
-                                                                      local_rank, iter_count, past_key_values)
+            # # Verifying the generated sequence against the ground truth
+            # first_false_position, past_key_values = oracle_verification(
+            #     oracle_model, generated_tokens.squeeze(0), max_new_tokens, local_rank, iter_count, past_key_values
+            # )
+            
+            # # matched_tokens = first_false_position
+            # matched_tokens = first_false_position + 1
+            # print("Matched tokens: ", matched_tokens)
 
-                # matched_tokens = first_false_positions + torch.ones_like(first_false_positions)
-                matched_tokens = first_false_positions
+            # new_inputs = torch.cat([input_tensor[:, :matched_tokens], generated_tokens[:, :matched_tokens]], dim=-1)
 
-                print("Matched tokens: ")
-                print(len(matched_tokens))
-                print(matched_tokens)
-                print(matched_tokens[0])
+            # print("New inputs: ", new_inputs)
 
-                print("Test")
-                print(cat_tensor[0])
-                # print(cat_tensor[0][:matched_tokens[0]])
+            # total_matched += matched_tokens
+            # print("Total matched: ", total_matched)
 
-                # slice_length = min(matched_tokens[0], cat_tensor[0].size(0))
+            # # Save results
+            # if local_rank == 0:
+            #     with open(output_file, "a") as f:
+            #         f.write(str(total_matched.tolist()) + "\n")
 
-                # print(slice_length)
+            # current_length = total_matched.item()
 
-                input_list = []
-
-                for idx, matched in enumerate(matched_tokens):
-                    input_list.append(torch.cat((torch.zeros(torch.max(matched_tokens) - matched_tokens[idx],
-                                                             dtype=torch.int32).cuda(local_rank),
-                                                 input_tensors[idx],
-                                                 cat_tensor[idx][:matched_tokens[idx]]),
-                                                dim=0))
-
-                new_inputs = torch.stack(input_list)
-                # print(f"new_inputs: {new_inputs[:, -5:]}")
-                total_matched += matched_tokens
-
-                # Logging the total matched tokens to a file if the local rank is 0
-                if local_rank == 0:
-                    with open(output_file, "a") as f:
-                        f.write(str(total_matched.tolist()) + str("\n"))
-
-                # Updating the current length for the next iteration
-                current_length = min(total_matched)
-
-            else:
-                continue
+            iteration += 1
 
 
-
+            

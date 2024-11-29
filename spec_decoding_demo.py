@@ -7,6 +7,10 @@ import torch.distributed as dist
 import json
 import os
 
+import random
+
+random.seed(42)
+
 def parse_tensors_from_file(file_path):
     """
     Input: file_path: Path to the file containing the ground truth tensors from large LLM execution.
@@ -48,8 +52,8 @@ def parse_tensors_from_file(file_path):
 
         # Create a tensor from the list of lists and add to our tensor list
         final_tensor = torch.cat(row_tensors, dim=0)
-        if final_tensor.size(0) != prev_length:
-            print(iter, final_tensor.size(0), prev_length)
+        # if final_tensor.size(0) != prev_length:
+        #     print(iter, final_tensor.size(0), prev_length)
         prev_length = final_tensor.size(0)
         tensor_list.append(torch.cat(row_tensors, dim=0))
 
@@ -82,7 +86,8 @@ if __name__ == "__main__":
     input_file_path = 'llama-65b-hellaswag.txt'  # Replace with your input file path
     ground_truth_tensor_list = parse_tensors_from_file(input_file_path)
 
-    test_json = json_loader("./hellaswag.json")  # Replace with your file path
+    #test_json = json_loader("./hellaswag.json")  # Replace with your file path
+    test_json = json_loader("./hellaswag_shortened.json")  # Replace with your file path
 
     # The LLaMA tokenizer does not have a pad token.
     # Modify the tokenizer to add a pad token and change the model configs accordingly.
@@ -115,7 +120,8 @@ if __name__ == "__main__":
     # Set hyperparameters for speculative decoding
     batch_size = 1
     max_new_tokens = 4 # Draft model generates max_new_tokens per iteration
-    output_file = "llama-796m-hellaswag-lookahead-4.txt" # Change this to your output name
+    #output_file = "llama-796m-hellaswag-lookahead-4.txt" # Change this to your output name
+    output_file = "ten_input_test.txt" # Change this to your output name
 
     processed_batches = 0
 
