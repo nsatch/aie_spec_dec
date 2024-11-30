@@ -1,0 +1,38 @@
+[2024-11-29 18:52:35,173] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-29 18:52:36,414] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-29 18:52:36,414] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-11-29 18:52:37,507] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-29 18:52:38,746] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-29 18:52:38,746] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-29 18:52:38,746] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-29 18:52:38,746] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-29 18:52:38,746] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-29 18:52:38,752] [INFO] [launch.py:256:main] process 543856 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-11-29 18:52:39,878] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER = True
+1 0 0
+[2024-11-29 18:52:42,204] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-29 18:52:42,205] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-11-29 18:53:20,624] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-29 18:53:20,624] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:  We see a baby rinse a cup. she
+Draft successes:  1
+Final output:  We see a baby rinse a cup. she’s wearing a white shirt with a red bow. her hair is a little messy. she’s a cute little girl.class="post-template-default single single-post postid-1100 single-format-standard custom-background full-width full-width-template custom-background full-width-template wpb-js-composer js-composer-fullwidth vc_responsive"Chances are, if you’re a parent, you’ve experienced it. You’ve been told to let your child be a child. You’ve been told to let your child make mistakes. You’ve been told to let your child grow up. And you’ve been told to let your child be creative.
+These are all good things to do. And I’m not going to argue that we should change course and stop letting our kids be kids. But I do think we can do a better job of teaching our children about creativity and learning to be creative.
+I think we can do a better job of
+
+
+Current prompt:  [header] How to reset a nook [title] Press and hold the power button for 20 seconds. [step] Release after the 20 seconds has passed. This action should turn the nook off.
+Draft successes:  19
+Final output:  [header] How to reset a nook [title] Press and hold the power button for 20 seconds. [step] Release after the 20 seconds has passed. This action should turn the nook off. [step] Wait a few seconds and press the power button again. This should turn the nook back on. [step] Try to turn the nook on and off again. If it doesn't turn on, you may need to replace the battery. [step] If you have a stylus, you can use it to reset the nook by pressing the reset button on the bottom of the nook. This will turn the nook off and on again. [step] If you don't have a stylus, you can use a paperclip or other small object to press the reset button. [step] If the nook still won't turn on, you may need to replace the battery. [step] If you have a stylus, you can use it to reset the nook by pressing the reset button on the bottom of
+
+
+Current prompt:  [header] How to find friends who are already members of yelp [title] Visit the yelp webpage in your web browser. [title] Click the " find friends " link from the top of the webpage's toolbar to access the link to finding friends. [title] Determine your email client.
+Draft successes:  20
+Final output:  [header] How to find friends who are already members of yelp [title] Visit the yelp webpage in your web browser. [title] Click the " find friends " link from the top of the webpage's toolbar to access the link to finding friends. [title] Determine your email client. [title] Click the " find friends " link from the top of the webpage's toolbar to access the link to finding friends. [title] Click the " find friends " link from the top of the webpage's toolbar to access the link to finding friends. [title] Click the " find friends " link from the top of the webpage's toolbar to access the link to finding friends. [title] Click the " find friends " link from the top of the webpage's toolbar to access the link to finding friends. [title] Click the " find friends " link from the top of the webpage's toolbar to access the link to finding friends. [title] Click the " find friends " link from the top of the webpage's toolbar to access the link to finding friends. [title] Click the " find friends " link from the top of the
+[2024-11-29 18:54:03,837] [INFO] [launch.py:351:main] Process 543856 exits successfully.
+
+
+The runtime is 91.46798849105835

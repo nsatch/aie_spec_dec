@@ -1,0 +1,85 @@
+[2024-11-29 20:08:35,891] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-29 20:08:37,160] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-29 20:08:37,160] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-11-29 20:08:38,231] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-29 20:08:39,407] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-29 20:08:39,407] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-29 20:08:39,407] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-29 20:08:39,407] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-29 20:08:39,407] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-29 20:08:39,413] [INFO] [launch.py:256:main] process 567451 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-11-29 20:08:40,507] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-11-29 20:08:42,619] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-29 20:08:42,620] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-11-29 20:09:21,031] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-29 20:09:21,031] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:  We see a baby rinse a cup. she
+Draft successes:  1
+Final output:  We see a baby rinse a cup. she’s wearing a white shirt with a red bow. her hair is a little messy. she’s a cute little girl.class="post-template-default single single-post postid-1100 single-format-standard custom-background full-width full-width-template custom-background full-width-template wpb-js-composer js-composer-fullwidth vc_responsive"Chances are, if you’re a parent, you’ve experienced it. You’ve been told to let your child be a child. You’ve been told to let your child make mistakes. You’ve been told to let your child grow up. And you’ve been told to let your child be creative.
+These are all good things to do. And I’m not going to argue that we should change course and stop letting our kids be kids. But I do think we can do a better job of teaching our children about creativity and learning to be creative.
+I think we can do a better job of
+
+
+Current prompt:  A woman is seen speaking to the camera and showing off various tools to the camera. she
+Draft successes:  27
+Final output:  A woman is seen speaking to the camera and showing off various tools to the camera. she is standing in a room with a lot of tools, including a large, black, square, metal tool.
+A woman is seen speaking to the camera and showing off various tools to the camera. she is standing in a room with a lot of tools, including a large, black, square, metal tool.
+A woman is seen speaking to the camera and showing off various tools to the camera. she is standing in a room with a lot of tools, including a large, black, square, metal tool.
+A woman is seen speaking to the camera and showing off various tools to the camera. she is standing in a room with a lot of tools, including a large, black, square, metal tool.
+A woman is seen speaking to the camera and showing off various tools to the camera. she is standing in a
+
+
+Current prompt:  The ride reaches the top and the man holds out his arms. He counts down and drops the man down to bungee jump. the man
+Draft successes:  1
+Final output:  The ride reaches the top and the man holds out his arms. He counts down and drops the man down to bungee jump. the man jumps and falls down to the bottom.byron bay, new south wales, australia - sep 2017: aerial view of the lighthouse on the headland at byron bay, new south wales, australia - byron bay stock pictures, royalty-free photos & images
+byron bay, new south wales, australia - sep 2017: aerial view of the lighthouse on the headland at byron bay, new south wales, australia - byron bay stock pictures, royalty-free photos & images
+byron bay, new south wales, australia - sep 2017: aerial view of the lighthouse on the headland at byron bay, new south wales, australia - byron bay stock pictures, royalty-free photos & images
+byron bay, new south wales, australia - sep 2017: aerial view of the lighthouse on the headland at byron bay
+
+
+Current prompt:  Several products are laid out followed by a woman grooming a horse. The woman brushes the horse all around it's body while the horse lays motionless. she
+Draft successes:  6
+Final output:  Several products are laid out followed by a woman grooming a horse. The woman brushes the horse all around it's body while the horse lays motionless. she continues to brush the horse and the horse moves its head back and forth as if to say "yes". The woman continues to groom the horse until it's done. The woman then takes a small bottle and sprays the horse's fur. The horse continues to move its head back and forth and the woman continues to groom the horse. The woman then sprays the horse's fur with a red liquid. The horse continues to move its head back and forth and the woman continues to groom the horse. The woman then sprays the horse's fur with a blue liquid. The horse continues to move its head back and forth and the woman continues to groom the horse. The woman then sprays the horse's fur with a yellow liquid. The horse continues to move its head back and forth and the woman continues to groom the horse. The woman then sprays the horse's fur with a green liquid. The horse continues to move its
+
+
+Current prompt:  [header] How to prepare a reed for a saxophone [title] Select your reed. [step] There are several manufactures of reeds and several different kinds that can be used. The first kind is the cane reeds.
+Draft successes:  5
+Final output:  [header] How to prepare a reed for a saxophone [title] Select your reed. [step] There are several manufactures of reeds and several different kinds that can be used. The first kind is the cane reeds. These reeds are made of cane. They are available in different thicknesses and hardnesses. The second kind is the synthetic reeds. These reeds are made of plastic. They are available in different thicknesses and hardnesses. The third kind is the metal reeds. These reeds are made of metal. They are available in different thicknesses and hardnesses. [step] There are several manufacturers of reeds and several different kinds that can be used. The first kind is the cane reeds. These reeds are made of cane. They are available in different thicknesses and hardnesses. The second kind is the synthetic reeds. These reeds are made of plastic. They are available in different thicknesses and hardnesses. The third kind is the metal reeds. These reeds are made of metal. They are available in different thicknesses and hardnesses. [step] There are several manufacturers of
+
+
+Current prompt:  [header] How to improve half life 2 deathmatch skill [title] Find a good server, a server with a low ping is a must for getting better. [title] Play with experienced players. [step] Players that are part of a clan are often good.
+Draft successes:  11
+Final output:  [header] How to improve half life 2 deathmatch skill [title] Find a good server, a server with a low ping is a must for getting better. [title] Play with experienced players. [step] Players that are part of a clan are often good. [title] Learn to read maps. [title] Learn to read the map, you can find the best spots to hide and the best spots to attack. [title] Learn to use the health pack. [title] Health packs are useful, especially in team deathmatch. [title] Learn to use the sniper rifle. [title] Sniper rifles are very useful in team deathmatch. [title] Learn to use the rocket launcher. [title] Rocket launchers are very useful in team deathmatch. [title] Learn to use the shotgun. [title] Shotguns are very useful in team deathmatch. [title] Learn to use the grenade. [title] Grenades are very useful in team deathmatch. [title] Learn to use the flashbang. [title] Flashbangs are very useful in team deathmatch. [title] Learn to use the smoke grenade
+
+
+Current prompt:  [header] How to open master locks [title] Know that bumping a lock is the best method. [title] Procure or make a bump key. [step] Procuring a bump key involves asking for a locksmith to make a 999 key (where all the valleys are cut to the maximum depth.
+Draft successes:  9
+Final output:  [header] How to open master locks [title] Know that bumping a lock is the best method. [title] Procure or make a bump key. [step] Procuring a bump key involves asking for a locksmith to make a 999 key (where all the valleys are cut to the maximum depth. The bumps are a specific shape and size and are only cut on master keys. [step] Making a bump key involves a process that is described in the video above. [step] Once you have a bump key, you can bump the lock. [step] The bump key is inserted into the keyhole and then turned. [step] The key is bumped to the left, right, and up and down to make the lock open. [step] The lock is now open. [title] Make sure to keep your bump key in a safe place. [title] Know that a bump key can be used to open any lock with a master key. [title] Know that a bump key can be used to open any lock with a master key. [title] Know that a bump key can be used to open any lock with a master key. [title] Know that a bump key can be
+
+
+Current prompt:  [header] How to prevent getting spyware [title] Avoid downloading free programs. [step] When you see a program that you may find useful and is free, do not just download it. Make sure it is from a reliable source, searching the web for reviews and opinions about the software.
+Draft successes:  11
+Final output:  [header] How to prevent getting spyware [title] Avoid downloading free programs. [step] When you see a program that you may find useful and is free, do not just download it. Make sure it is from a reliable source, searching the web for reviews and opinions about the software. If you are not sure, you can always download a trial version of the software and then decide whether to buy it or not. [step] Do not open email attachments from unknown senders. [step] Do not download files from web sites that you do not trust. [step] Do not open attachments from emails from people that you do not know. [step] Do not download files from email attachments from people that you do not know. [step] Do not download files from email attachments from people that you do not know. [step] Do not open files from email attachments from people that you do not know. [step] Do not open files from email attachments from people that you do not know. [step] Do not download files from email attachments from people that you do not know. [step] Do not open files from email attachments from people that you do not know.
+
+
+Current prompt:  [header] How to make soy sauce [title] Wash and sort 4 cups (950 ml) of soybeans. [step] You can get soybeans (or edamame) from some grocery stores, although you may need to visit a store specializing in asian produce. [substeps] Make sure you remove the soybeans from their pods before you soak them.
+Draft successes:  5
+Final output:  [header] How to make soy sauce [title] Wash and sort 4 cups (950 ml) of soybeans. [step] You can get soybeans (or edamame) from some grocery stores, although you may need to visit a store specializing in asian produce. [substeps] Make sure you remove the soybeans from their pods before you soak them. [step] Soak the soybeans overnight in a large bowl or pot. [substeps] Cover the beans with 3 cups (700 ml) of water. [substeps] If you can, use a pot that will allow the beans to soak in water at least 2 inches (5 cm) above the beans. [substeps] If you don't have a pot that will allow for this, you can cover the bowl with a plate or a bowl with a lid. [step] Drain the beans and rinse them. [substeps] Put the beans in a pot and cover them with 4 cups (950 ml) of fresh water. [substeps] Bring the water to a boil and cook the beans for 20 minutes. [substeps] Turn off the heat and let the beans sit in the pot for 10 minutes. [step] Drain the beans and rinse them. [sub
+
+
+Current prompt:  [header] How to find balance in your life [title] Schedule in down-time and breaks. [step] This may seem odd at first to actually block out time to not do anything, but it will help make sure you actually take a break. Set an alarm if you have to that reminds you that the break time is coming up and take the break when it comes up.
+Draft successes:  32
+Final output:  [header] How to find balance in your life [title] Schedule in down-time and breaks. [step] This may seem odd at first to actually block out time to not do anything, but it will help make sure you actually take a break. Set an alarm if you have to that reminds you that the break time is coming up and take the break when it comes up. [step] This may seem odd at first to actually block out time to not do anything, but it will help make sure you actually take a break. Set an alarm if you have to that reminds you that the break time is coming up and take the break when it comes up. [step] This may seem odd at first to actually block out time to not do anything, but it will help make sure you actually take a break. Set an alarm if you have to that reminds you that the break time is coming up and take the break when it comes up. [step] This may seem odd at first to actually block out time to not do anything, but it will help make sure you actually take a break. Set an alarm if you have to that reminds you that the break time is
+
+
+Current prompt:  [header] How to obtain small business web hosting [title] Meet with your marketing team to discuss your budget and what features your website will need. [step] For example, all websites should include a home page, contact page and technical support; however, others need email addresses, shopping carts, content management system, web analytics and blogs. Create a list of everything you need from a website before looking around, so you have firm parameters in mind.
+Draft successes:  6
+Final output:  [header] How to obtain small business web hosting [title] Meet with your marketing team to discuss your budget and what features your website will need. [step] For example, all websites should include a home page, contact page and technical support; however, others need email addresses, shopping carts, content management system, web analytics and blogs. Create a list of everything you need from a website before looking around, so you have firm parameters in mind. [step] You can start by searching for a web host that offers the features you need. Many web hosts offer a free trial period, so you can test the service before making a commitment. [step] Another way to find the right host is to ask your friends, family, or colleagues who have websites. They may be able to recommend a web host that is not on your radar. [step] Once you have narrowed down your options, it's time to compare features and prices. Be sure to read the fine print and understand what is included in the price you are paying. [step] It's also important to check the reputation of the web host. Look for reviews online and talk to other business owners who have used their services. [step] Finally, consider the level of customer support offered by the web host. You want to be sure that they will be there to help you when you need them. [step
+[2024-11-29 20:11:58,612] [INFO] [launch.py:351:main] Process 567451 exits successfully.
+
+
+The runtime is 205.5494179725647

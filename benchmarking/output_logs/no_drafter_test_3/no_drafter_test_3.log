@@ -1,0 +1,33 @@
+[2024-11-29 18:49:41,028] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-29 18:49:42,314] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-29 18:49:42,314] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-11-29 18:49:43,387] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-29 18:49:44,630] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-29 18:49:44,630] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-29 18:49:44,630] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-29 18:49:44,630] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-29 18:49:44,630] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-29 18:49:44,636] [INFO] [launch.py:256:main] process 537211 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-11-29 18:49:45,735] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER = False
+1 0 0
+[2024-11-29 18:49:47,815] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-29 18:49:47,816] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-11-29 18:50:25,914] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-29 18:50:25,915] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:  We see a baby rinse a cup. she
+Final output:  We see a baby rinse a cup. she’s wearing a white shirt with a red bow. her hair is a little messy and her skin is pink. she’s looking up at the camera.
+
+
+Current prompt:  [header] How to reset a nook [title] Press and hold the power button for 20 seconds. [step] Release after the 20 seconds has passed. This action should turn the nook off.
+Final output:  [header] How to reset a nook [title] Press and hold the power button for 20 seconds. [step] Release after the 20 seconds has passed. This action should turn the nook off. [step] Hold the power button down again for 20 seconds. This should turn the nook back on. [step] You may need to repeat this step a few times before the nook turns on. [step] If you are unable to turn the nook on, it is likely that the nook has a hardware problem. Please contact Barnes and Noble for further assistance. [/header]
+
+
+Current prompt:  [header] How to find friends who are already members of yelp [title] Visit the yelp webpage in your web browser. [title] Click the " find friends " link from the top of the webpage's toolbar to access the link to finding friends. [title] Determine your email client.
+Final output:  [header] How to find friends who are already members of yelp [title] Visit the yelp webpage in your web browser. [title] Click the " find friends " link from the top of the webpage's toolbar to access the link to finding friends. [title] Determine your email client. [title] Click the " sign in " link at the top of the webpage to access the sign in page. [title] Click the " sign in with " link to access the sign in page. [title] Click the " yahoo " link to access the sign in page. [title] Click the " sign in " link to access the sign in page. [title] Click the " yahoo " link to access the sign in page. [title] Click the " sign in " link to access the sign in page. [title] Click the " yahoo " link to access the sign in page. [title] Click the " sign in " link to access the sign in page. [title] Click the " yahoo " link to access the sign in page. [title] Click the " sign in " link to access the sign in page. [title] Click the " yahoo " link to access the sign in page. [title
+[2024-11-29 18:50:31,683] [INFO] [launch.py:351:main] Process 537211 exits successfully.
+
+
+The runtime is 53.46296238899231

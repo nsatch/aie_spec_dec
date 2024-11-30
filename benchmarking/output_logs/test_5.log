@@ -1,0 +1,2822 @@
+[2024-11-29 17:21:44,836] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-29 17:21:46,045] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-29 17:21:46,045] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-11-29 17:21:47,121] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-29 17:21:48,332] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-29 17:21:48,333] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-29 17:21:48,333] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-29 17:21:48,333] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-29 17:21:48,333] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-29 17:21:48,339] [INFO] [launch.py:256:main] process 474763 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-11-29 17:21:49,448] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+1 0 0
+[2024-11-29 17:21:51,506] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-29 17:21:51,507] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-11-29 17:22:30,743] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-29 17:22:30,743] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+Current prompt:  We see a baby rinse a cup. she
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([1], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([2], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([3], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([4], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([5], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([6], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([7], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([8], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([9], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([10], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([11], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([12], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([13], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([14], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([15], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([16], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([18], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([19], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([20], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([21], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([22], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([23], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([24], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([25], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([26], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([27], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([28], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([29], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([30], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([31], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([32], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([33], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([34], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([35], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([36], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([37], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([38], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([39], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([40], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([41], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([42], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([43], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([44], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([45], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([46], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([47], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([48], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([49], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([50], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([51], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([52], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([53], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([54], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([55], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([56], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([57], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([58], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([59], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([60], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([61], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([62], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([63], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([64], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([65], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([66], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([67], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([68], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([69], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([70], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([71], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([72], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([73], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([74], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([75], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([76], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([77], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 1.], device='cuda:0')
+Total matched:  tensor([78], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([79], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([80], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([81], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([82], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([83], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([84], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([85], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([86], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([87], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([88], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([89], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([90], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([91], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([92], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([93], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([94], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([95], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([96], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([97], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([98], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([99], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([100], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([101], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 1.], device='cuda:0')
+Total matched:  tensor([102], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([103], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([104], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([105], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([106], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([107], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([108], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([109], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([110], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([111], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([112], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([113], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([114], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([115], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([116], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([117], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([118], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([119], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([120], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 1.], device='cuda:0')
+Total matched:  tensor([121], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([122], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([123], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([124], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([125], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([126], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([127], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([128], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([129], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([130], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([131], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([132], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([133], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([134], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([135], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([136], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 1.], device='cuda:0')
+Total matched:  tensor([137], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 1.], device='cuda:0')
+Total matched:  tensor([138], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([139], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([140], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([141], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([142], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([143], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([144], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([145], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([146], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([147], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([148], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([149], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([150], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([151], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([152], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([153], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([154], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([155], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([156], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([157], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([158], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([159], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([160], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([161], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([162], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([163], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([164], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([165], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([166], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([167], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([168], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([169], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([170], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([171], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([172], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([173], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([174], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([175], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([176], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([177], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([178], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([179], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([180], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([181], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([182], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([183], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([184], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([185], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([186], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([187], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([188], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([189], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([190], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([191], device='cuda:0', dtype=torch.int32)
+Draft successes:  1
+Final output:  We see a baby rinse a cup. she’s wearing a white shirt with a red bow. her hair is a little messy. she’s a cute little girl.class="post-template-default single single-post postid-1100 single-format-standard custom-background full-width full-width-template custom-background full-width-template wpb-js-composer js-composer-fullwidth vc_responsive"Chances are, if you’re a parent, you’ve experienced it. You’ve been told to let your child be a child. You’ve been told to let your child make mistakes. You’ve been told to let your child grow up. And you’ve been told to let your child be creative.
+These are all good things to do. And I’m not going to argue that we should change course and stop letting our kids be kids. But I do think we can do a better job of teaching our children about creativity and learning to be creative.
+I think we can do a better job of
+
+Current prompt:  A man is unrolling carpet onto the floor. He is on his knees cutting the carpet. He is putting glue onto the floor. he
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([1], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([2], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([3], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([4], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([5], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([6], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([7], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([8], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([9], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([10], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([11], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([13], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([14], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([18], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([19], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([21], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([22], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 0.], device='cuda:0')
+Total matched:  tensor([29], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([30], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([32], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([33], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([35], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([36], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([40], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([41], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([43], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([44], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 0.], device='cuda:0')
+Total matched:  tensor([51], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([52], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([54], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([55], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([57], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([58], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([62], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([63], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([71], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([73], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([74], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([76], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([77], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([79], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([80], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([88], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([96], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([99], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([100], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([108], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([116], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([119], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([120], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([128], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([136], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([139], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([140], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([148], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([156], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([159], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([160], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([168], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([176], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([179], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([180], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([188], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([196], device='cuda:0', dtype=torch.int32)
+Draft successes:  33
+Final output:  A man is unrolling carpet onto the floor. He is on his knees cutting the carpet. He is putting glue onto the floor. he is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet.
+
+Current prompt:  [header] How to start your own business [title] Come up with an idea. [step] You will need an idea for a business before you do anything else. You can conduct a market research to have a clear image.
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([1], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([3], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([4], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([5], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([6], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([7], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([8], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([9], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([10], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([11], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([12], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([13], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([14], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([15], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([16], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([17], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([18], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([19], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([20], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([21], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([22], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([23], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([24], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([25], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([27], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([28], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([29], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([30], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([31], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([32], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([34], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([35], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([36], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([37], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([42], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([43], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([44], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([45], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([46], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([47], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([48], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 1., 1., 1., 1., 0.], device='cuda:0')
+Total matched:  tensor([50], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 1., 1., 0., 1.], device='cuda:0')
+Total matched:  tensor([51], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([52], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([57], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([58], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([59], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([60], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([61], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([62], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([63], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([64], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([65], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([66], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([67], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([68], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([69], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([70], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([71], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([72], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([73], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([74], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([75], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([76], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([78], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([79], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([81], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([82], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([83], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([85], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([86], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([88], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([89], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([91], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([92], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([94], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([95], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([96], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([97], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([98], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([99], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([100], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([101], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([102], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([103], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([104], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([105], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([107], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([108], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([110], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 1., 1., 1., 0.], device='cuda:0')
+Total matched:  tensor([111], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([112], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([113], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([114], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([115], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([116], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([117], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([118], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([119], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([120], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([122], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([123], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([125], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([126], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 1., 1., 0.], device='cuda:0')
+Total matched:  tensor([127], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 1., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([128], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([129], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([131], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([132], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 1., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([134], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([135], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([138], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([139], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([141], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([142], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([144], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([145], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([147], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([148], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([151], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([152], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([153], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([154], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([155], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([158], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([159], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([163], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([164], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 0., 1., 1., 0.], device='cuda:0')
+Total matched:  tensor([167], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([168], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([169], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([170], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([175], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([176], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([177], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([178], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([181], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([182], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([183], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([186], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([187], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([188], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([189], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([191], device='cuda:0', dtype=torch.int32)
+Draft successes:  30
+Final output:  [header] How to start your own business [title] Come up with an idea. [step] You will need an idea for a business before you do anything else. You can conduct a market research to have a clear image. You can also look at the market trends to find the gap. [title] Register your business. [step] You will need to register your business. You will need to register your business name and business address. You will also need to register your business with the Inland Revenue Department. [title] Get a business license. [step] You will need to get a business license. You will need to apply for a business license from the relevant department. You will need to pay the license fee. [title] Get a business insurance. [step] You will need to get a business insurance. You will need to get a business insurance to protect your business. You will need to get a business insurance to protect your business. [title] Get a business bank account. [step] You will
+
+Current prompt:  [header] How to help a children's charity [title] Search for a charities. [step] Thankfully, there are many charity organizations that are directing their efforts to helping children. However, you will have to do some searching to narrow your list down.
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([1], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([2], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([3], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([4], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([5], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([6], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([7], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([8], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([9], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([10], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([11], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([12], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([13], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([14], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([15], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([16], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([17], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([18], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([19], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([20], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([21], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([22], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([23], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([24], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([25], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([26], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([27], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([28], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([29], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([30], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([31], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([32], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([33], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([34], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([35], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([36], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([37], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([38], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([39], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([40], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([41], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([42], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([43], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([44], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([45], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([46], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([47], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([48], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([49], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([50], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([51], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([52], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([53], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([54], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([55], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([56], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([57], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([58], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([60], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([61], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([62], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([63], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([64], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([65], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([66], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([67], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([68], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([69], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([70], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([71], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([72], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([73], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([74], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([75], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([76], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([77], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([78], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([79], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([80], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([81], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([83], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([84], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([88], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([89], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([90], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([91], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([92], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([93], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([94], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([95], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([96], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([97], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([98], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([99], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([100], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([101], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([102], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([103], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([104], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([105], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([106], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([107], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([113], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([114], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([115], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([116], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([117], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([118], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([119], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([120], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([121], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([122], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([124], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([125], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([126], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([127], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([128], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([129], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([130], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([131], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 1., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([137], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([138], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([139], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([140], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([141], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([142], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([143], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([144], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([145], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([146], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([148], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([149], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([150], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([151], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([152], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([153], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([154], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([155], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([157], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([158], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([159], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([161], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([162], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([163], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([164], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([165], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([166], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([167], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([168], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([169], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([170], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([171], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([173], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([174], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([175], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([176], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([177], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([178], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([179], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([180], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([181], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([182], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([184], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([185], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([189], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([190], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([191], device='cuda:0', dtype=torch.int32)
+Draft successes:  12
+Final output:  [header] How to help a children's charity [title] Search for a charities. [step] Thankfully, there are many charity organizations that are directing their efforts to helping children. However, you will have to do some searching to narrow your list down. [step] You can start by visiting your local library. The library should have a list of children's charities. You can also contact your local school. The school should have a list of local children's charities. [step] You can also contact your local newspaper. The newspaper should have a list of children's charities. [step] You can also contact your local church. The church should have a list of children's charities. [step] You can also contact your local community center. The community center should have a list of children's charities. [step] You can also contact your local hospital. The hospital should have a list of children's charities. [step] You can also contact your local mall. The mall should have a list of children's charities. [step] You can also contact your local grocery store. The grocery store should have a list of children's charities.
+
+Current prompt:  [header] How to do a reverse french braid [title] Prep your hair for braiding. [step] Use a wide tooth comb or a brush to remove any tangles and knots from your hair. This is extremely important because as you braid, the ends of your hair are going to get particularly crisscrossed, creating tangles.
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([1], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([2], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([3], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([4], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([5], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([6], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([7], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([8], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([9], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([10], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([11], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([12], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([13], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([14], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([15], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([16], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([17], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([18], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([19], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([20], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([21], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([22], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([23], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([24], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([26], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([27], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([28], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([29], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([30], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([31], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([32], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([33], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([34], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([36], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([37], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([38], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([39], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([40], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([41], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([42], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([43], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([44], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([45], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([46], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([47], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([48], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([49], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([50], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([51], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([52], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([53], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([54], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([55], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([56], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([57], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([58], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([59], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([60], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([61], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([62], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([63], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([64], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([65], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([66], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([67], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([68], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([69], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([70], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([71], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([72], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([73], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([74], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([75], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([76], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([77], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([78], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([79], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([80], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([81], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([82], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([83], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([84], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([85], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([86], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([87], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([88], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([89], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([90], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([91], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([92], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([93], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([94], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([95], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([96], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([97], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([98], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([99], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([100], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([101], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([102], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([103], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([104], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([105], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([106], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([107], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([108], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([109], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([110], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([111], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([112], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([113], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([114], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([115], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([116], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([117], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([118], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([119], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([120], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([121], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([122], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([123], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([124], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([125], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([126], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([127], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([128], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([129], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([130], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([131], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([132], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([133], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([134], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([135], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([136], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([137], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([138], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([139], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([140], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([141], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([142], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([143], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([144], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([145], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([146], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([147], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([148], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([149], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([150], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([151], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([152], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([153], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([154], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([155], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([156], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([157], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([158], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([159], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([160], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([161], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([162], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([163], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([164], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([165], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([166], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([167], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([168], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([169], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([170], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([171], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([172], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([173], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([174], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([175], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([176], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([177], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([178], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([179], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([180], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([181], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([182], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([183], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([184], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([185], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([186], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([187], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([188], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([189], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([190], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([191], device='cuda:0', dtype=torch.int32)
+Draft successes:  2
+Final output:  [header] How to do a reverse french braid [title] Prep your hair for braiding. [step] Use a wide tooth comb or a brush to remove any tangles and knots from your hair. This is extremely important because as you braid, the ends of your hair are going to get particularly crisscrossed, creating tangles. [step] Separate your hair into three sections. [step] Braid the top section. [step] Braid the middle section. [step] Braid the bottom section. [step] Place the braids over the middle section. [step] Secure the braids with bobby pins. [step] You can add a barrette for added style. [step] This hairstyle can be worn loose or pulled back with a headband. [step]MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'] }, displayMath: [ ['message','error'] }); [title] How to do a reverse french braid [title] Prep your hair for braiding. [step] Use a wide tooth comb or a brush to remove any tangles and knots from your hair. This is extremely important because as you braid, the ends of your hair are going to get particularly
+
+Current prompt:  [header] How to obtain small business web hosting [title] Meet with your marketing team to discuss your budget and what features your website will need. [step] For example, all websites should include a home page, contact page and technical support; however, others need email addresses, shopping carts, content management system, web analytics and blogs. Create a list of everything you need from a website before looking around, so you have firm parameters in mind.
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([1], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([2], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([3], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([4], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([5], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([6], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([7], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([8], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([9], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([10], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([11], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([12], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([13], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([14], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([15], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([16], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([17], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([18], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([19], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([20], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([21], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([22], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([23], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([24], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([25], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([26], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([27], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([28], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([29], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([30], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([31], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([32], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([33], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([34], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([35], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([36], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([37], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([38], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([39], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([40], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([41], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([42], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([43], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([44], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([45], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([46], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([47], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([48], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([49], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([51], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([52], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 1., 1., 1., 0.], device='cuda:0')
+Total matched:  tensor([53], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([55], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([56], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([57], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([58], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([59], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([60], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([61], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([62], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([63], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([64], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([65], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([66], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([68], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([69], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([70], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([71], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([72], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([73], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([74], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([75], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([76], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([77], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([78], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([79], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([80], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([81], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([82], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([83], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([84], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([85], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([86], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([88], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([89], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([90], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([91], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([92], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([93], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([94], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([95], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([96], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 1., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([98], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([99], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([100], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([101], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([102], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([103], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([105], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([106], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([107], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([108], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 1., 1., 0.], device='cuda:0')
+Total matched:  tensor([109], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([110], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([111], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([112], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([113], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([114], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([115], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([116], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([117], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([119], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([120], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 0., 1., 0., 1.], device='cuda:0')
+Total matched:  tensor([123], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([124], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([125], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([126], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([127], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([128], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 0., 1., 1., 0.], device='cuda:0')
+Total matched:  tensor([131], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([132], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([133], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([134], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([135], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([136], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([137], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([138], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([141], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([142], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([143], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 1., 0., 1.], device='cuda:0')
+Total matched:  tensor([144], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([146], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([147], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([148], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([149], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([150], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 1., 1., 1., 0., 1.], device='cuda:0')
+Total matched:  tensor([152], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 1., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([153], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([154], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([155], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([156], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([157], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([158], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 0.], device='cuda:0')
+Total matched:  tensor([159], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([160], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([161], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([162], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([163], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([164], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([165], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([166], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([167], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([168], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([169], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([170], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([171], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([172], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([173], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([176], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([177], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([178], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 1., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([180], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 1., 0., 0., 0., 1.], device='cuda:0')
+Total matched:  tensor([181], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 0., 1., 1., 0.], device='cuda:0')
+Total matched:  tensor([183], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 1., 1., 0., 0.], device='cuda:0')
+Total matched:  tensor([184], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([185], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([1., 0., 0., 1., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([187], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 1., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([188], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 1., 0., 0., 0., 0., 0.], device='cuda:0')
+Total matched:  tensor([189], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 0., 1., 1.], device='cuda:0')
+Total matched:  tensor([190], device='cuda:0', dtype=torch.int32)
+
+correct predictions:  tensor([0., 0., 0., 0., 1., 1., 1.], device='cuda:0')
+Total matched:  tensor([191], device='cuda:0', dtype=torch.int32)
+Draft successes:  16
+Final output:  [header] How to obtain small business web hosting [title] Meet with your marketing team to discuss your budget and what features your website will need. [step] For example, all websites should include a home page, contact page and technical support; however, others need email addresses, shopping carts, content management system, web analytics and blogs. Create a list of everything you need from a website before looking around, so you have firm parameters in mind. [step] Next, look for a web hosting company that offers what you need. There are many options out there, but you should consider a company that offers a variety of features and a good price. [step] Once you find a company that offers what you need, contact them and discuss your needs. Ask for a quote on your project and if the price is right, then you can get started. [step] After you receive your quote, you can get started with your website. If you need to hire a web designer or developer, you can get started with them. The web designer or developer will build the website for you. [step] Once your website is complete, you can submit it to Google and other search engines. You can also start promoting your website to get more traffic. [step] You can also start advertising your website. This is a
+
+[2024-11-29 17:23:53,463] [INFO] [launch.py:351:main] Process 474763 exits successfully.
+Return status: 0
+
+
+The runtime is 131.44604325294495

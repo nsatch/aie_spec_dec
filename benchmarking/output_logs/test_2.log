@@ -1,0 +1,33 @@
+[2024-11-29 17:36:26,422] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-29 17:36:27,662] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-29 17:36:27,663] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-11-29 17:36:28,721] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-29 17:36:29,937] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-29 17:36:29,937] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-29 17:36:29,937] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-29 17:36:29,937] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-29 17:36:29,937] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-29 17:36:29,945] [INFO] [launch.py:256:main] process 501495 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-11-29 17:36:31,034] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+1 0 0
+[2024-11-29 17:36:33,152] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-29 17:36:33,153] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-11-29 17:37:11,689] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-29 17:37:11,690] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:  We see a baby rinse a cup. she
+Draft successes:  1
+Final output:  We see a baby rinse a cup. she’s wearing a white shirt with a red bow. her hair is a little messy. she’s a cute little girl.class="post-template-default single single-post postid-1100 single-format-standard custom-background full-width full-width-template custom-background full-width-template wpb-js-composer js-composer-fullwidth vc_responsive"Chances are, if you’re a parent, you’ve experienced it. You’ve been told to let your child be a child. You’ve been told to let your child make mistakes. You’ve been told to let your child grow up. And you’ve been told to let your child be creative.
+These are all good things to do. And I’m not going to argue that we should change course and stop letting our kids be kids. But I do think we can do a better job of teaching our children about creativity and learning to be creative.
+I think we can do a better job of
+
+
+Current prompt:  [header] How to play 7 minutes in heaven [title] Ready the game location. [step] You'll need a small, closed off area of your home to play this game. This area is generally dark, though you could also choose one that is well lit.
+Draft successes:  5
+Final output:  [header] How to play 7 minutes in heaven [title] Ready the game location. [step] You'll need a small, closed off area of your home to play this game. This area is generally dark, though you could also choose one that is well lit. [step] Pick a couple of chairs for your players to sit on, and make sure they are comfortable. [step] Tell your players that they are going to play a game called "7 Minutes in Heaven." [step] Inform them that the game is very simple. They will sit in the chairs, close their eyes, and listen to music. When the music stops, they will open their eyes, and the person sitting next to them will kiss them. [step] Ask your players if they are comfortable with this game, and if they are willing to play. [step] Explain that the game is played in pairs, and that the pair will not be able to speak during the 7 minutes. [step] Inform your players that the game is over when the music stops. [step] Ask your players if they have any questions. [step] Begin the game by playing a song. [step] When
+[2024-11-29 17:37:44,019] [INFO] [launch.py:351:main] Process 501495 exits successfully.
+Return status: 0
+
+
+The runtime is 80.4305214881897

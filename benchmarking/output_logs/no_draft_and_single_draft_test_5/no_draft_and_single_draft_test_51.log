@@ -1,0 +1,53 @@
+[2024-11-29 20:16:53,096] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-29 20:16:54,344] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-29 20:16:54,344] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-11-29 20:16:55,403] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-29 20:16:56,674] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-29 20:16:56,674] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-29 20:16:56,674] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-29 20:16:56,674] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-29 20:16:56,674] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-29 20:16:56,680] [INFO] [launch.py:256:main] process 589645 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-11-29 20:16:57,780] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-11-29 20:16:59,925] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-29 20:16:59,926] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-11-29 20:17:38,058] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-29 20:17:38,059] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:  We see a baby rinse a cup. she
+Draft successes:  1
+Final output:  We see a baby rinse a cup. she’s wearing a white shirt with a red bow. her hair is a little messy. she’s a cute little girl.class="post-template-default single single-post postid-1100 single-format-standard custom-background full-width full-width-template custom-background full-width-template wpb-js-composer js-composer-fullwidth vc_responsive"Chances are, if you’re a parent, you’ve experienced it. You’ve been told to let your child be a child. You’ve been told to let your child make mistakes. You’ve been told to let your child grow up. And you’ve been told to let your child be creative.
+These are all good things to do. And I’m not going to argue that we should change course and stop letting our kids be kids. But I do think we can do a better job of teaching our children about creativity and learning to be creative.
+I think we can do a better job of
+
+
+Current prompt:  A man is unrolling carpet onto the floor. He is on his knees cutting the carpet. He is putting glue onto the floor. he
+Draft successes:  33
+Final output:  A man is unrolling carpet onto the floor. He is on his knees cutting the carpet. He is putting glue onto the floor. he is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet. He is cutting the carpet. He is standing up and walking around with the carpet.
+
+
+Current prompt:  [header] How to start your own business [title] Come up with an idea. [step] You will need an idea for a business before you do anything else. You can conduct a market research to have a clear image.
+Draft successes:  30
+Final output:  [header] How to start your own business [title] Come up with an idea. [step] You will need an idea for a business before you do anything else. You can conduct a market research to have a clear image. You can also look at the market trends to find the gap. [title] Register your business. [step] You will need to register your business. You will need to register your business name and business address. You will also need to register your business with the Inland Revenue Department. [title] Get a business license. [step] You will need to get a business license. You will need to apply for a business license from the relevant department. You will need to pay the license fee. [title] Get a business insurance. [step] You will need to get a business insurance. You will need to get a business insurance to protect your business. You will need to get a business insurance to protect your business. [title] Get a business bank account. [step] You will
+
+
+Current prompt:  [header] How to help a children's charity [title] Search for a charities. [step] Thankfully, there are many charity organizations that are directing their efforts to helping children. However, you will have to do some searching to narrow your list down.
+Draft successes:  12
+Final output:  [header] How to help a children's charity [title] Search for a charities. [step] Thankfully, there are many charity organizations that are directing their efforts to helping children. However, you will have to do some searching to narrow your list down. [step] You can start by visiting your local library. The library should have a list of children's charities. You can also contact your local school. The school should have a list of local children's charities. [step] You can also contact your local newspaper. The newspaper should have a list of children's charities. [step] You can also contact your local church. The church should have a list of children's charities. [step] You can also contact your local community center. The community center should have a list of children's charities. [step] You can also contact your local hospital. The hospital should have a list of children's charities. [step] You can also contact your local mall. The mall should have a list of children's charities. [step] You can also contact your local grocery store. The grocery store should have a list of children's charities.
+
+
+Current prompt:  [header] How to do a reverse french braid [title] Prep your hair for braiding. [step] Use a wide tooth comb or a brush to remove any tangles and knots from your hair. This is extremely important because as you braid, the ends of your hair are going to get particularly crisscrossed, creating tangles.
+Draft successes:  2
+Final output:  [header] How to do a reverse french braid [title] Prep your hair for braiding. [step] Use a wide tooth comb or a brush to remove any tangles and knots from your hair. This is extremely important because as you braid, the ends of your hair are going to get particularly crisscrossed, creating tangles. [step] Separate your hair into three sections. [step] Braid the top section. [step] Braid the middle section. [step] Braid the bottom section. [step] Place the braids over the middle section. [step] Secure the braids with bobby pins. [step] You can add a barrette for added style. [step] This hairstyle can be worn loose or pulled back with a headband. [step]MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'] }, displayMath: [ ['message','error'] }); [title] How to do a reverse french braid [title] Prep your hair for braiding. [step] Use a wide tooth comb or a brush to remove any tangles and knots from your hair. This is extremely important because as you braid, the ends of your hair are going to get particularly
+
+
+Current prompt:  [header] How to obtain small business web hosting [title] Meet with your marketing team to discuss your budget and what features your website will need. [step] For example, all websites should include a home page, contact page and technical support; however, others need email addresses, shopping carts, content management system, web analytics and blogs. Create a list of everything you need from a website before looking around, so you have firm parameters in mind.
+Draft successes:  16
+Final output:  [header] How to obtain small business web hosting [title] Meet with your marketing team to discuss your budget and what features your website will need. [step] For example, all websites should include a home page, contact page and technical support; however, others need email addresses, shopping carts, content management system, web analytics and blogs. Create a list of everything you need from a website before looking around, so you have firm parameters in mind. [step] Next, look for a web hosting company that offers what you need. There are many options out there, but you should consider a company that offers a variety of features and a good price. [step] Once you find a company that offers what you need, contact them and discuss your needs. Ask for a quote on your project and if the price is right, then you can get started. [step] After you receive your quote, you can get started with your website. If you need to hire a web designer or developer, you can get started with them. The web designer or developer will build the website for you. [step] Once your website is complete, you can submit it to Google and other search engines. You can also start promoting your website to get more traffic. [step] You can also start advertising your website. This is a
+[2024-11-29 20:18:54,799] [INFO] [launch.py:351:main] Process 589645 exits successfully.
+
+
+The runtime is 124.56872320175171
