@@ -1,0 +1,16 @@
+baseline_no_draft:
+  active: 1
+  oracle_model: meta-llama/Llama-3.2-3B
+baseline_single_draft:
+  active: 1
+  draft1_model: minghaoyan/Wide-Sheared-LLaMA-796M
+  oracle_model: meta-llama/Llama-3.2-3B
+double_draft: 1
+full_prompt_input_file: prompts/hellaswag_sorted_acceptance.json
+num_input_prompts: 3
+num_spec_tokens:
+- 1
+- 5
+stride_enable: 0
+strided_prompt_output_file: prompts/hellaswag_sorted_acceptance.json
+test_name: test_summary_write

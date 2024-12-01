@@ -1,0 +1,7 @@
+Updating oracle model to meta-llama/Llama-3.2-3B
+Updating tokenizer to match oracle model (meta-llama/Llama-3.2-3B)
+Updating USE_DRAFTER to False
+TODO NOT YET IMPLEMENTED - Updating drafter 1 
+TODO NOT YET IMPLEMENTED - Updating drafter 2 
+Updating max_tokens to None (number of speculative tokens generated)
+	Note that 'None' is okay here if we are not using a drafter model

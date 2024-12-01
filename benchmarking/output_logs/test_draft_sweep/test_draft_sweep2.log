@@ -1,0 +1,59 @@
+[2024-11-30 14:48:24,060] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 14:48:25,320] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-30 14:48:25,320] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-11-30 14:48:26,411] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 14:48:27,658] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-30 14:48:27,658] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-30 14:48:27,658] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-30 14:48:27,658] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-30 14:48:27,658] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-30 14:48:27,664] [INFO] [launch.py:256:main] process 798913 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-11-30 14:48:28,747] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-11-30 14:48:31,336] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 14:48:31,337] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-11-30 14:50:16,731] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 14:50:16,731] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man
+Draft successes:  40
+Final output:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man speaks to the camera: "I have a problem." A man in a white coat enters the booth and sits next to the man holding the pipe. The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You have a problem." The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You have a problem." The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You have a problem." The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to
+
+
+Current prompt:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he
+Draft successes:  2
+Final output:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he looks at the rubik's cube and says "I have 4 cubes, and I want to know how many ways I can arrange them so that all the cubes are in different positions"3D and none of the cubes are in the same position.def arrange_cubes(n):
+    """Write a function that takes an integer n and returns the number of ways you can arrange n cubes so that none of the cubes are in the same position. The function should use recursion and should not use any loops or conditional statements.
+    """
+    if n == 1:
+        return 1
+    else:
+        return arrange_cubes(n-1) * arrange_cubes(n-1)
+2018-11-13T10:52:52Z
+2018-11-13T10:52:52Z
+The function should return the number of ways to arrange n cubes so that none of the cubes
+
+
+Current prompt:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we
+Draft successes:  12
+Final output:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see the child sitting in the chair. A man is shown holding the chair in place as it is being swung.1def swinging_swing_chair(child, man):
+    """Swing the chair and the child on the swing.
+    """
+    child = swing_chair(child)
+    man = swing_chair(man)
+    return child, man
+
+2021-05-31suppose we want to swing the chair and the child on the swing. We will use the following code to do so:
+We first initialize the child and man to be None, and then use the swing_chair function to swing the chair and the child. We then return the child and man to be the same as they were before the swing.
+    """
+    child = None
+    man = None
+    swing_chair(child)
+    return child, man
+I have
+[2024-11-30 14:50:40,805] [INFO] [launch.py:351:main] Process 798913 exits successfully.
+
+
+The runtime is 139.557067155838

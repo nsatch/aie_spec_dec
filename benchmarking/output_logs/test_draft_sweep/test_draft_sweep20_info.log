@@ -1,0 +1,5 @@
+Updating oracle model to meta-llama/Llama-3.2-3B
+Updating tokenizer to match oracle model (meta-llama/Llama-3.2-3B)
+Updating USE_DRAFTER to True
+Updating draft model one to rasyosef/Llama-3.2-180M-Amharic
+Updating max_tokens to 5 (number of speculative tokens generated)

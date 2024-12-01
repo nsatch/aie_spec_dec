@@ -1,0 +1,56 @@
+[2024-11-30 12:58:24,434] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 12:58:25,680] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-30 12:58:25,680] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-11-30 12:58:26,749] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 12:58:27,971] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-30 12:58:27,971] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-30 12:58:27,971] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-30 12:58:27,971] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-30 12:58:27,971] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-30 12:58:27,978] [INFO] [launch.py:256:main] process 644608 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-11-30 12:58:29,078] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = False
+1 0 0
+[2024-11-30 12:58:31,191] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 12:58:31,192] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-11-30 12:59:09,426] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 12:59:09,427] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man
+Final output:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man speaks to the camera: "I have a problem." A man in a white coat enters the booth and sits next to the man in the booth. The man in the white coat speaks to the man in the booth: "What is your problem?" The man in the booth replies: "I can't stop smoking." The man in the white coat speaks to the man in the booth: "How long have you been smoking?" The man in the booth replies: "I have been smoking for 30 years." The man in the white coat speaks to the man in the booth: "Do you want to stop smoking?" The man in the booth replies: "Yes." The man in the white coat speaks to the man in the booth: "I can help you stop smoking." The man in the booth replies: "What can you do?" The man in the white coat speaks to the man in the booth: "I have a machine that will
+
+
+Current prompt:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he
+Final output:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he walks over to the door and opens it. He steps out into the hallway. He turns around and walks back into his office. He walks over to the desk and picks up the rubik's cube. He puts the rubik's cube down and stands up. He walks over to the door and opens it. He steps out into the hallway. He turns around and walks back into his office. He walks over to the desk and picks up the rubik's cube. He puts the rubik's cube down and stands up. He walks over to the door and opens it. He steps out into the hallway. He turns around and walks back into his office. He walks over to the desk and picks up the rubik's cube. He puts the rubik's cube down and stands up. He walks over to the door and opens it. He steps out into the hallway. He turns around and walks back into his office. He walks over
+
+
+Current prompt:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we
+Final output:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see the swing in motion.
+A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see the swing in motion.
+
+
+Current prompt:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys
+Final output:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys and girls are sitting on the stadium. A matador fights with a bull in a stadium. A man and a woman are sitting on the stadium. A matador fights with a bull in a stadium. A matador fights with a bull in a stadium. A man and a woman are sitting on the stadium. A matador fights with a bull in a stadium. A man and a woman are sitting on the stadium. A matador fights with a bull in a stadium. A man and a woman are sitting on the stadium. A matador fights with a bull in a stadium. A man and a woman are sitting on the stadium. A matador fights with a bull in a stadium. A man and a woman are sitting on the stadium. A matador fights with a bull in a stadium. A man and a woman are sitting on the stadium. A matador fights with a bull in a stadium. A man and a woman are sitting
+
+
+Current prompt:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys
+Final output:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys give the lady a bunch of flowers. The lady gives the flowers to her husband. The lady's husband gives her a white rose. The lady gives her husband a kiss. The lady and her husband give each other a hug. The lady and her husband kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady gives her husband a kiss. The lady
+
+
+Current prompt:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone.
+Final output:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone. [step] Look at the phone, but don't look like you are texting. You can look at the screen and then look at your classmates. You can look at the screen and then look at the teacher. You can look at the screen and then look at the clock. You can look at the screen and then look at your notes. You can look at the screen and then look at the ground. You can look at the screen and then look at the window. You can look at the screen and then look at your hair. You can look at the screen and then look at the ceiling. You can look at the screen and then look at the teacher. You can look at the screen and then look at the ground. You can look at the screen and then look at the clock. You can look at the screen and then look at your notes. You can look at the screen and then look at your hair. You can look at the
+
+
+Current prompt:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men
+Final output:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea. Surfing on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea.
+People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea. Surfing on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea.
+People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea. Surfing on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea.
+
+
+Current prompt:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band.
+Final output:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band. [step] The color code is a 3 or 4 digit number that represents the resistor value. [title] The first two digits represent the number of zeros to multiply by 1,000. [title] The third digit represents the number of zeros to multiply by 10. [title] The fourth digit represents the number of zeros to multiply by 1. [title] The fifth digit represents the number of zeros to multiply by 0.1. [title] The sixth digit represents the number of zeros to multiply by 0.01. [title] The seventh digit represents the number of zeros to multiply by 0.001. [title] The eighth digit represents the number of zeros to multiply by 0.0001. [title] The ninth digit represents the number of zeros to multiply by 0.00001. [title] The tenth digit represents the number of zeros to multiply by 0.000001
+[2024-11-30 12:59:29,039] [INFO] [launch.py:351:main] Process 644608 exits successfully.
+
+
+The runtime is 67.44062089920044

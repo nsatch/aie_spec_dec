@@ -1,0 +1,27 @@
+baseline_no_draft:
+  active: 1
+  oracle_model: meta-llama/Llama-3.2-3B
+baseline_single_draft:
+  active: 1
+  draft1_model:
+  - minghaoyan/Wide-Sheared-LLaMA-796M
+  - minghaoyan/Wide-Sheared-LLaMA-543M
+  - minghaoyan/Wide-Sheared-LLaMA-290M
+  - rasyosef/Llama-3.2-180M-Amharic
+  oracle_model:
+  - meta-llama/Llama-3.2-3B
+double_draft: 1
+drafter_switch_threshold: 50
+full_prompt_input_file: prompts/hellaswag_sorted_acceptance.json
+num_input_prompts: 3
+num_spec_tokens:
+- 1
+- 2
+- 3
+- 4
+- 5
+- 7
+- 15
+stride_enable: 0
+strided_prompt_output_file: prompts/hellaswag_sorted_acceptance.json
+test_name: test_draft_sweep

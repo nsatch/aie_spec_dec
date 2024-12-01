@@ -12,8 +12,14 @@ import os
 
 import random
 
-# Param variables 
+# Param variables
+
+# DON"T DELETE EXTRA SPACES HERE!
+# It will screw up parameterization from benchmarking script!!
 USE_DRAFTER    = True
+USE_DOUBLE_DRAFTER    = True
+# DON"T DELETE EXTRA SPACES HERE!
+# It will screw up parameterization from benchmarking script!!
 
 seed = 42
 random.seed(seed)
@@ -176,7 +182,7 @@ if __name__ == "__main__":
     print(world_size, rank, local_rank)
     os.environ['TRANSFORMERS_CACHE'] = "cache"  # Replace with your transformers cache directory
 
-    test_json = json_loader("benchmarking/prompts/hellaswag_shortened_5.json")
+    test_json = json_loader("benchmarking/prompts/hellaswag_sorted_acceptance_topn_3.json")
 
     # Define the checkpoint dict. You may need to convert *.safetensors to
     # *.bin for this work. Make sure you get all the *.bin and *.pt files in
@@ -211,7 +217,7 @@ if __name__ == "__main__":
     tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-3B", torch_dtype=torch.float16)
 
     # Feel free to change it to the draft model of your choice
-    draft_model = AutoModelForCausalLM.from_pretrained("minghaoyan/Wide-Sheared-LLaMA-796M", torch_dtype=torch.float16)
+    draft_model = AutoModelForCausalLM.from_pretrained("minghaoyan/Wide-Sheared-LLaMA-290M")
     draft_model.resize_token_embeddings(len(tokenizer))
 
 
@@ -223,6 +229,36 @@ if __name__ == "__main__":
         dtype=torch.float16,
         # checkpoint=checkpoint_dict,
     )
+
+    # Ashley, please take a look at this and see if this is set up correctly for draft 2
+    ### START OF CODE ADDED BY NICK FOR DRAFT 2 ###
+    # Feel free to change it to the draft model of your choice
+    draft2_model = AutoModelForCausalLM.from_pretrained("minghaoyan/Wide-Sheared-LLaMA-796M")
+    draft2_model.resize_token_embeddings(len(tokenizer))
+
+
+    # Launch the draft model with deepspeed on 1 node. Alternatively, you could use HF or load from a checkpoint.
+    draft2_model = deepspeed.init_inference(
+        draft2_model,
+        replace_with_kernel_inject=False,
+        tp={"tp_size": 1, },
+        dtype=torch.float16,
+        # checkpoint=checkpoint_dict,
+    )
+
+    # This variable acts as the pointer for which draft model to use
+    #   0 = Use draft 1
+    #   1 = Use draft 2
+    draft_model_ptr = 0
+
+    # Percent threshold of length through the prompt where we switch between drafter models
+    # Units: 50 = 50% 
+    # NOT 0.5 = 50%
+    drafter_switch_threshold = 50
+    # Disable drafter toggle in one draft case. Can never be 200% of the way through a prompt!
+    if not USE_DOUBLE_DRAFTER:
+        drafter_switch_threshold = 200
+    #### END OF CODE ADDED BY NICK FOR DRAFT 2 ####
 
     # Set hyperparameters for speculative decoding
     max_tokens = 7
@@ -257,12 +293,13 @@ if __name__ == "__main__":
             while current_length < max_length:
                 # print("Iteration: ", current_length, max_length)
 
-                if iter_count == 0: 
+                if iter_count == 0:
                     # For the first iteration, use the input prompt
                     iter_count += 1
                     input_tensor = draft_input_ids
-                else: 
+                else:
                     # For subsequent iterations, use new inputs based on matched tokens
+                    # IGNORE THE LSP ERROR FOR THIS LINE! :)
                     input_tensor = new_inputs
 
                 '''
@@ -272,8 +309,18 @@ if __name__ == "__main__":
 
                 output_len = input_tensor.size(1) + max_tokens
 
-                # Generate predictions
-                draft_output = draft_model.generate(input_tensor, max_new_tokens=max_tokens).to(dtype=torch.int32)
+                # Ashley, please check this switch logic
+                # Switch between the drafter models when length threshold is met
+                if current_length / max_length * 100 >= drafter_switch_threshold:
+                    #print(f"Current length is at {current_length} out of {max_length}. Switching drafters!")
+                    draft_model_ptr = 1
+
+                # Ashley, please check that I am using draft2 correctly
+                # Generate predictions (Nick adds toggle between model)
+                if draft_model_ptr == 0:
+                    draft_output = draft_model.generate(input_tensor, max_new_tokens=max_tokens).to(dtype=torch.int32)
+                else:
+                    draft_output = draft2_model.generate(input_tensor, max_new_tokens=max_tokens).to(dtype=torch.int32)
                 '''
                 print("Draft output: ", draft_output)
                 print("Draft output size: ", draft_output.size())

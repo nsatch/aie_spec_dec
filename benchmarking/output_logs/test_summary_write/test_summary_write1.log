@@ -1,0 +1,41 @@
+[2024-11-30 14:00:21,165] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 14:00:22,415] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-30 14:00:22,415] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-11-30 14:00:23,524] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 14:00:24,728] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-30 14:00:24,728] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-30 14:00:24,728] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-30 14:00:24,728] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-30 14:00:24,728] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-30 14:00:24,734] [INFO] [launch.py:256:main] process 747169 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-11-30 14:00:25,846] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-11-30 14:00:27,864] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 14:00:27,866] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-11-30 14:01:06,002] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 14:01:06,003] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man
+Draft successes:  0
+Final output:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man speaks to the camera: "I have a problem." A man in a white coat enters the booth and sits next to the man in the booth. The man in the white coat speaks to the man in the booth: "What is your problem?" The man in the booth replies: "I can't stop smoking." The man in the white coat speaks to the man in the booth: "How long have you been smoking?" The man in the booth replies: "I have been smoking for 30 years." The man in the white coat speaks to the man in the booth: "Do you want to stop smoking?" The man in the booth replies: "Yes." The man in the white coat speaks to the man in the booth: "I can help you stop smoking." The man in the booth replies: "What can you do?" The man in the white coat speaks to the man in the booth: "I have a machine that will help you stop smoking." The
+
+
+Current prompt:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he
+Draft successes:  49
+Final output:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he then says "Hey, I'm a man, I'm a man, I'm a man." He then takes a large box of rubik's cubes and puts them in the box and puts the box in his pocket. He then says "I'm a man, I'm a man, I'm a man." He then walks out the door.by a man in a suit. He then says "I'm a man, I'm a man, I'm a man." He then walks out the door. He then says "I'm a man, I'm a man, I'm a man." He then walks out the door. He then says "I'm a man, I'm a man, I'm
+
+
+Current prompt:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we
+Draft successes:  79
+Final output:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see the child playing in the chair.
+ A man is shown working on a set. He is seen from the waist up. We see the chair in the background.
+ A man is shown working on a set. He is seen from the waist up. We see the chair in the background.
+ A man is shown working on a set. He is seen from the waist up. We see the chair in the background.
+ A man is shown working on a set. He is seen from the waist up. We see the chair in the background.
+ A man is shown working on a set. He is
+[2024-11-30 14:01:25,794] [INFO] [launch.py:351:main] Process 747169 exits successfully.
+
+
+The runtime is 67.42543339729309

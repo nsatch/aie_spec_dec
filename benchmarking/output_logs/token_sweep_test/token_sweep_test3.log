@@ -1,0 +1,46 @@
+[2024-11-30 13:37:58,690] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 13:37:59,938] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-30 13:37:59,938] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-11-30 13:38:01,013] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 13:38:02,305] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-30 13:38:02,305] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-30 13:38:02,305] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-30 13:38:02,305] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-30 13:38:02,305] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-30 13:38:02,312] [INFO] [launch.py:256:main] process 706265 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-11-30 13:38:03,407] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-11-30 13:38:05,591] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 13:38:05,593] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-11-30 13:38:43,740] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 13:38:43,741] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   [header] How to make and color clay beads [title] Purchase or find the items on the things you'll need list. [title] Cover a flat surface (such as a table) with newspaper, to protect it. [title] Take the plastic covering off of the clay and lay it out on the table with the plastic wrap underneath.
+Draft successes:  0
+Final output:   [header] How to make and color clay beads [title] Purchase or find the items on the things you'll need list. [title] Cover a flat surface (such as a table) with newspaper, to protect it. [title] Take the plastic covering off of the clay and lay it out on the table with the plastic wrap underneath. [title] Use the rolling pin to roll out the clay to about 1/4 inch thick. [title] Cut out strips of clay about 3/4 inch wide and 12 inches long. [title] Use the clay knife to cut the clay into 1/2 inch beads. [title] Use the clay knife to cut the clay into 1/4 inch beads. [title] Use the clay knife to cut the clay into 1/8 inch beads. [title] Use the clay knife to cut the clay into 1/16 inch beads. [title] Use the clay knife to cut the clay into 1/32 inch beads. [title] Use the clay knife to cut the clay into 1/64 inch beads. [title] Use the clay knife to cut the clay into 1/128 inch beads. [title] Use the clay knife to cut the clay into 1/256 inch beads. [
+
+
+Current prompt:   [header] How to finely chop dates [title] Use a serrated or paring knife wake up to slice the date lengthwise. [step] Set the date on a cutting board or hold the date in the palm of your hand. Make a cut down the long side of the date.
+Draft successes:  0
+Final output:   [header] How to finely chop dates [title] Use a serrated or paring knife wake up to slice the date lengthwise. [step] Set the date on a cutting board or hold the date in the palm of your hand. Make a cut down the long side of the date. [step] Rotate the date 90 degrees and make another cut. [step] Continue making cuts in 90 degree increments until the date is finely chopped. [step] Repeat with remaining dates. [step] Add the chopped dates to a bowl. [step] Add the chopped dates to a bowl. [step] Add the chopped dates to a bowl. [step] Add the chopped dates to a bowl. [step] Add the chopped dates to a bowl. [step] Add the chopped dates to a bowl. [step] Add the chopped dates to a bowl. [step] Add the chopped dates to a bowl. [step] Add the chopped dates to a bowl. [step] Add the chopped dates to a bowl. [step] Add the chopped dates to a bowl. [step] Add the chopped dates to a bowl. [step] Add the chopped dates to a bowl. [step] Add the chopped dates to a bowl. [
+
+
+Current prompt:   [header] How to knit a triangle shawl [title] Get out 1 skein of lightweight yarn. [step] You'll need a 5.3 ounce (150 g) skein of light-weight yarn that measures 518 yards (473 m) to make 1 triangle shawl. The finished shawl will measure about 42 in (106 cm) across and 32 in (81 cm) long.
+Draft successes:  0
+Final output:   [header] How to knit a triangle shawl [title] Get out 1 skein of lightweight yarn. [step] You'll need a 5.3 ounce (150 g) skein of light-weight yarn that measures 518 yards (473 m) to make 1 triangle shawl. The finished shawl will measure about 42 in (106 cm) across and 32 in (81 cm) long. [step] Cast on 8 stitches. [step] Work 1 knit stitch, then 2 knit stitches, then 1 knit stitch. [step] Repeat the 1 knit stitch, 2 knit stitches, 1 knit stitch pattern. [step] Continue to repeat the pattern until you have 56 stitches. [step] Knit 1 row. [step] Turn work and purl 1 row. [step] Turn work and knit 1 row. [step] Continue to alternate purl and knit rows until you have 56 stitches. [step] Knit 1 row. [step] Turn work and purl 1 row. [step] Turn work and knit 1 row. [step] Continue to alternate purl and knit rows until you have 56 stitches. [step] Knit 1 row. [step] Turn work and purl 1 row. [step] Turn work and knit 
+
+
+Current prompt:   [header] How to write a properly formatted screenplay [title] Put " fade in " on the first page. [step] The first page of your screenplay should always include a " fade in " note at the top of the page as the first item on the page. Make sure the letters are in all capitals and are flush to the left margin of the page.
+Draft successes:  15
+Final output:   [header] How to write a properly formatted screenplay [title] Put " fade in " on the first page. [step] The first page of your screenplay should always include a " fade in " note at the top of the page as the first item on the page. Make sure the letters are in all capitals and are flush to the left margin of the page. [step] Include a page number on every page. [step] Your page numbers should be flush to the right margin of the page and should be in all capital letters. [step] Every page should include a scene header. [step] The scene header should include the date, the scene number and the scene title. The scene header should be centered on the page and should be in all capital letters. [step] The scene header should be followed by a two line space. [step] Your scene header should be followed by a two line space. [step] The first line of the scene header should be the date. [step] The date should be written in the following format: " 1/1/2000 ". [step] The second line of the scene header should be the scene number. [step] The scene number should be written in the following format: "
+
+
+Current prompt:   [header] How to can dill pickles [title] Get some cucumbers. [step] Kirby cucumbers are the " classic " pickling cucumber, and are recommended for sweet and crunchy pickles. Typically, for pickling a batch, you'll want at least two or three pounds of cucumbers.
+Draft successes:  0
+Final output:   [header] How to can dill pickles [title] Get some cucumbers. [step] Kirby cucumbers are the " classic " pickling cucumber, and are recommended for sweet and crunchy pickles. Typically, for pickling a batch, you'll want at least two or three pounds of cucumbers. [step] Cut off the blossom end of each cucumber. [step] Cut the cucumbers into 1/2 inch pieces. [step] Pack the cucumbers into a canning jar, leaving a little room at the top. [step] Pack the dill and garlic into the jar. [step] Add the vinegar, water, and salt. [step] Add the pickling spice, if desired. [step] Put on the lid, and process in a boiling water canner for 10 minutes. [step] Remove the jars from the water and set on a towel to cool. [step] Store in the refrigerator. [step] Enjoy!1/2 inch pieces. [step] Pack the cucumbers into a canning jar, leaving a little room at the top. [step] Pack the dill and garlic into the jar. [step] Add the vinegar, water, and salt. [step
+[2024-11-30 13:39:45,417] [INFO] [launch.py:351:main] Process 706265 exits successfully.
+
+
+The runtime is 109.55151915550232

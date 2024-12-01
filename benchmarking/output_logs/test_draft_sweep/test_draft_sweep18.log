@@ -1,0 +1,37 @@
+[2024-11-30 15:05:43,998] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 15:05:45,258] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-30 15:05:45,258] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-11-30 15:05:46,324] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 15:05:47,511] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-30 15:05:47,511] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-30 15:05:47,511] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-30 15:05:47,511] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-30 15:05:47,511] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-30 15:05:47,518] [INFO] [launch.py:256:main] process 877653 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-11-30 15:05:48,612] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-11-30 15:05:50,708] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 15:05:50,709] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-11-30 15:06:17,072] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 15:06:17,073] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man
+Draft successes:  26
+Final output:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man speaks to the camera: "I have a problem." A man in a white coat enters the booth and sits next to the man holding the pipe. The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You have a problem." The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You have a problem." The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You have a problem." The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You have
+
+
+Current prompt:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he
+Draft successes:  36
+Final output:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he then walks to the wall and turns around and looks at the wall. He then sits back down and starts doing the rubik's cube again. He sets the cube down and stands up. He walks to the wall and turns around and looks at the wall. He then sits back down and starts doing the rubik's cube again. He sets the cube down and stands up. He walks to the wall and turns around and looks at the wall. He then sits back down and starts doing the rubik's cube again. He sets the cube down and stands up. He walks to the wall and turns around and looks at the wall. He then sits back down and starts doing the rubik's cube again. He sets the cube down and stands up. He walks to the wall and turns around and
+
+
+Current prompt:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we
+Draft successes:  38
+Final output:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see a woman in a red dress sitting in the chair. The camera pans out and we see the child's swing chair on the ground.11
+The child's swing chair is on the
+[2024-11-30 15:06:37,567] [INFO] [launch.py:351:main] Process 877653 exits successfully.
+
+
+The runtime is 56.47990345954895

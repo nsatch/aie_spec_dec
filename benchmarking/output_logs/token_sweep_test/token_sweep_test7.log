@@ -1,0 +1,51 @@
+[2024-11-30 13:45:58,675] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 13:45:59,919] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-30 13:45:59,919] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-11-30 13:46:00,986] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 13:46:02,249] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-30 13:46:02,249] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-30 13:46:02,249] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-30 13:46:02,249] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-30 13:46:02,249] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-30 13:46:02,256] [INFO] [launch.py:256:main] process 733454 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-11-30 13:46:03,370] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-11-30 13:46:05,452] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 13:46:05,453] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-11-30 13:46:44,067] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 13:46:44,067] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   [header] How to make and color clay beads [title] Purchase or find the items on the things you'll need list. [title] Cover a flat surface (such as a table) with newspaper, to protect it. [title] Take the plastic covering off of the clay and lay it out on the table with the plastic wrap underneath.
+Draft successes:  0
+Final output:   [header] How to make and color clay beads [title] Purchase or find the items on the things you'll need list. [title] Cover a flat surface (such as a table) with newspaper, to protect it. [title] Take the plastic covering off of the clay and lay it out on the table with the plastic wrap underneath. [title] Use the rolling pin to roll out the clay to about 1/4 inch thick. [title] Cut out strips of clay about 3/4 inch wide and 12 inches long. [title] Use the clay knife to cut the clay into 1/2 inch beads. [title] Use the clay knife to cut the clay into 1/4 inch beads. [title] Use the clay knife to cut the clay into 1/8 inch beads. [title] Use the clay knife to cut the clay into 1/16 inch beads. [title] Use the clay knife to cut the clay into 1/32 inch beads. [title] Use the clay knife to cut the clay into 1/64 inch beads. [title] Use the clay knife to cut the clay into 1/128 inch beads. [title] Use the clay knife to
+
+
+Current prompt:   [header] How to finely chop dates [title] Use a serrated or paring knife wake up to slice the date lengthwise. [step] Set the date on a cutting board or hold the date in the palm of your hand. Make a cut down the long side of the date.
+Draft successes:  0
+Final output:   [header] How to finely chop dates [title] Use a serrated or paring knife wake up to slice the date lengthwise. [step] Set the date on a cutting board or hold the date in the palm of your hand. Make a cut down the long side of the date. [step] Hold the date in one hand and the knife in the other. With the knife parallel to the cutting board, cut the date lengthwise into thin slices. [step] Repeat the process until all the dates have been cut into thin slices. [step] Use a spoon to scoop up the finely chopped dates. [step] Use the finely chopped dates in a recipe. [step] Store the finely chopped dates in a sealed container in the refrigerator.by: Tasty
+How to finely chop dates
+Use a serrated or paring knife wake up to slice the date lengthwise.
+Set the date on a cutting board or hold the date in the palm of your hand. Make a cut down the long side of the date.
+Hold the date in one hand and the knife in the other. With the knife parallel to the cutting board, cut the date lengthwise into thin slices.
+
+
+
+Current prompt:   [header] How to knit a triangle shawl [title] Get out 1 skein of lightweight yarn. [step] You'll need a 5.3 ounce (150 g) skein of light-weight yarn that measures 518 yards (473 m) to make 1 triangle shawl. The finished shawl will measure about 42 in (106 cm) across and 32 in (81 cm) long.
+Draft successes:  5
+Final output:   [header] How to knit a triangle shawl [title] Get out 1 skein of lightweight yarn. [step] You'll need a 5.3 ounce (150 g) skein of light-weight yarn that measures 518 yards (473 m) to make 1 triangle shawl. The finished shawl will measure about 42 in (106 cm) across and 32 in (81 cm) long. [step] The triangle shawl is knit from the bottom up, starting with a chain of 12 stitches. [step] Knit 1 round. [step] Continue knitting 1 round every 10th row, or until the shawl measures about 8 in (20 cm) across. [step] Knit 1 round. [step] Knit 2 rounds. [step] Knit 1 round. [step] Knit 2 rounds. [step] Knit 1 round. [step] Knit 2 rounds. [step] Knit 1 round. [step] Knit 2 rounds. [step] Knit 1 round. [step] Knit 2 rounds. [step] Knit 1 round. [step] Knit 2 rounds. [step] Knit 1 round
+
+
+Current prompt:   [header] How to write a properly formatted screenplay [title] Put " fade in " on the first page. [step] The first page of your screenplay should always include a " fade in " note at the top of the page as the first item on the page. Make sure the letters are in all capitals and are flush to the left margin of the page.
+Draft successes:  3
+Final output:   [header] How to write a properly formatted screenplay [title] Put " fade in " on the first page. [step] The first page of your screenplay should always include a " fade in " note at the top of the page as the first item on the page. Make sure the letters are in all capitals and are flush to the left margin of the page. [step] The title of the screenplay should be in bold, centered, and all capitals. Make sure it is at least 14 points and that it is the first thing on the page. [step] The title page should contain the title of the screenplay, the writer's name, the date, and the number of pages. Make sure that the title page is the second thing on the page, and that it is centered and in bold, but not all capitals. [step] The first page of the screenplay should be titled " FADE IN " in bold, centered, and all capitals. Make sure that the letters are at least 14 points, and that it is the first thing on the page. [step] The first page of the screenplay should contain the date and the page number. Make sure that the date is in bold, centered, and all capitals, and that the
+
+
+Current prompt:   [header] How to can dill pickles [title] Get some cucumbers. [step] Kirby cucumbers are the " classic " pickling cucumber, and are recommended for sweet and crunchy pickles. Typically, for pickling a batch, you'll want at least two or three pounds of cucumbers.
+Draft successes:  1
+Final output:   [header] How to can dill pickles [title] Get some cucumbers. [step] Kirby cucumbers are the " classic " pickling cucumber, and are recommended for sweet and crunchy pickles. Typically, for pickling a batch, you'll want at least two or three pounds of cucumbers. [step] Get a gallon jar with a lid. [step] Fill the jar with cucumbers, leaving about an inch of room at the top. [step] Add 1/4 cup of pickling salt to the jar. [step] Add 1 cup of distilled white vinegar to the jar. [step] Add 1/2 cup of water to the jar. [step] Add 1/4 cup of sugar to the jar. [step] Add 1/4 cup of dill seeds to the jar. [step] Add 1/4 cup of fresh dill to the jar. [step] Add 1/4 cup of garlic cloves to the jar. [step] Add 1/2 cup of water to the jar. [step] Put the lid on the jar, and let it sit in a cool, dark place for at least
+[2024-11-30 13:48:48,421] [INFO] [launch.py:351:main] Process 733454 exits successfully.
+
+
+The runtime is 172.59211945533752

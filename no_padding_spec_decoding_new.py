@@ -56,6 +56,7 @@ def oracle_verification(model, input_tensor, draft_output, max_new_tokens, local
     # print(draft_output.size())
 
     for i in range(max_new_tokens):
+        # Isn't this generating a whole new token from the main model every iteration? So it's not actually just checking probability distribution?
         target_model_guess = model.generate(input_ids=input_tensor, max_new_tokens=1)
         # print("target model guess: ", target_model_guess)
         # print(target_model_guess.size())
@@ -74,8 +75,6 @@ def oracle_verification(model, input_tensor, draft_output, max_new_tokens, local
         input_tensor = target_model_guess
     
     return
-
-
 
 if __name__ == "__main__":
     dist.init_process_group(backend='nccl')
@@ -107,8 +106,8 @@ if __name__ == "__main__":
         "version": 1.0,
     }
 
+    # Setup main model
     oracle_model = AutoModelForCausalLM.from_pretrained('meta-llama/Llama-3.2-3B', torch_dtype=torch.float16)
-
     oracle_model = deepspeed.init_inference(
         oracle_model,
         replace_with_kernel_inject=False,
@@ -122,12 +121,10 @@ if __name__ == "__main__":
     # Modify the tokenizer to add a pad token and change the model configs accordingly.
     tokenizer = AutoTokenizer.from_pretrained('meta-llama/Llama-3.2-3B', torch_dtype=torch.float16)
 
-    # Feel free to change it to the draft model of your choice
+    # Setup drafter model
+    # What is a sheared model? Why can't we use another smaller one???
     draft_model = AutoModelForCausalLM.from_pretrained("minghaoyan/Wide-Sheared-LLaMA-796M", torch_dtype=torch.float16)
     draft_model.resize_token_embeddings(len(tokenizer))
-
-
-    # Launch the draft model with deepspeed on 1 node. Alternatively, you could use HF or load from a checkpoint.
     draft_model = deepspeed.init_inference(
         draft_model,
         replace_with_kernel_inject=False,
@@ -141,19 +138,18 @@ if __name__ == "__main__":
     output_file = "3b_796m_shortened.txt"
     past_key_values = None
 
-    iteration = 0
+    # Begin inference
     for data in test_json:
-        # if iteration == 0:
         current_prompt = data["prompt"]
 
         print("Current prompt: ", current_prompt)
 
+        # Tokenize input for the drafter model (How do we ensure the tokenizer works well also for the drafter model since its based on the oracle model???
         draft_input_ids = tokenizer.encode(current_prompt, return_tensors="pt").cuda(local_rank)
-
         # print("Number of draft ids: ", draft_input_ids.size())
         # print("Draft input ids: ", draft_input_ids)
 
-        # Calculating the maximum length for the generated sequence
+        # Calculating the maximum length for the generated output sequence
         max_length = 200 - max_tokens - 2
         current_length = 0
         iter_count = 0
@@ -166,12 +162,14 @@ if __name__ == "__main__":
         while current_length < max_length:
             # print("Iteration: ", current_length, max_length)
 
+            # For the first iteration, use the OG prefix + the drafter tokens
             if iter_count == 0: 
-                # For the first iteration, use the input prompt
-                iter_count += 1
+                iter_count += 1     # This is the only time we update the iter_count??? Like this in base code too
+                print("Using drafter model")
                 input_tensor = draft_input_ids
+
+            # For subsequent iterations, use new inputs based on matched tokens
             else: 
-                # For subsequent iterations, use new inputs based on matched tokens
                 input_tensor = new_inputs
 
             # print("Input tensor size: ", input_tensor.size(1))
@@ -181,8 +179,8 @@ if __name__ == "__main__":
 
             # Generate predictions
             draft_output = draft_model.generate(input_tensor, max_new_tokens=max_tokens).to(dtype=torch.int32)
-            # print("Draft output: ", draft_output)
-            # print("Draft output size: ", draft_output.size())
+            #print("Draft output: ", draft_output)
+            #print("Draft output size: ", draft_output.size())
 
             # print("Decode draft output: ", tokenizer.decode(draft_output[0], skip_special_tokens=True))
 

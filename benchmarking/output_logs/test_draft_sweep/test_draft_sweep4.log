@@ -1,0 +1,36 @@
+[2024-11-30 14:52:28,090] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 14:52:29,311] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-30 14:52:29,311] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-11-30 14:52:30,388] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 14:52:31,656] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-30 14:52:31,656] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-30 14:52:31,656] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-30 14:52:31,656] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-30 14:52:31,656] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-30 14:52:31,663] [INFO] [launch.py:256:main] process 811838 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-11-30 14:52:32,751] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-11-30 14:52:35,016] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 14:52:35,017] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-11-30 14:52:38,977] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 14:52:38,977] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man
+Draft successes:  24
+Final output:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man speaks to the camera: "I have a problem." A man in a white coat enters the booth and sits next to the man in the booth. The man in the white coat holds up one end of the pipe. The man in the white coat speaks to the camera: "I have a problem." The man in the white coat speaks to the man in the booth: "I don't think it's the pipe." The man in the white coat speaks to the camera: "I think it's the man." The man in the white coat speaks to the man in the booth: "Maybe we should get another man." The man in the white coat speaks to the camera: "I think it's the man." The man in the white coat speaks to the man in the booth: "Maybe we should get another man." The man in the white coat
+
+
+Current prompt:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he
+Draft successes:  13
+Final output:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he then picks up a book and reads it for a bit. He then sits down again and picks up the rubik's cube. He starts to turn the cube and then stops and says "I think I have it!" He then sits down and looks at the cube and says "I think I have it" He then stands up and says "I think I have it" He then sits down and says "I think I have it" He then stands up and says "I think I have it" He then sits down and says "I think I have it" He then stands up and says "I think I have it" He then sits down and says "I think I have it" He then stands up and says "I think I have it" He then sits down and says "I think I have it" He then stands up and says "I think I have it" He then sits down and
+
+
+Current prompt:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we
+Draft successes:  29
+Final output:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see the chair in the air. then the man is shown adjusting the chair. then we see the chair being installed into the air. then we see the man adjusting the chair. then the chair is shown being installed into the air. then the man is shown adjusting the chair. then the chair is shown being installed into the air. then the man is shown adjusting the chair. then the chair is shown being installed into the air. then the man is shown adjusting the chair. then the chair is shown being installed into the air. then the man is shown adjusting the chair. then the chair is shown being installed into the air. then the man is shown adjusting the chair. then the chair is shown being installed into the air. then the man is shown adjusting the chair. then the chair is shown being installed into the air. then
+[2024-11-30 14:53:02,694] [INFO] [launch.py:351:main] Process 811838 exits successfully.
+
+
+The runtime is 37.43346190452576

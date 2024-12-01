@@ -1,0 +1,37 @@
+[2024-11-30 15:02:39,796] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 15:02:41,018] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-30 15:02:41,018] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-11-30 15:02:42,081] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-30 15:02:43,341] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-30 15:02:43,341] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-30 15:02:43,341] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-30 15:02:43,341] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-30 15:02:43,341] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-30 15:02:43,348] [INFO] [launch.py:256:main] process 864412 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-11-30 15:02:44,434] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-11-30 15:02:52,409] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 15:02:52,410] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-11-30 15:03:13,928] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-30 15:03:13,929] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man
+Draft successes:  0
+Final output:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man speaks to the camera: "I have a problem." A man in a white coat enters the booth and sits next to the man in the booth. The man in the white coat speaks to the man in the booth: "What is your problem?" The man in the booth replies: "I can't stop smoking." The man in the white coat speaks to the man in the booth: "How long have you been smoking?" The man in the booth replies: "I have been smoking for 30 years." The man in the white coat speaks to the man in the booth: "Do you want to stop smoking?" The man in the booth replies: "Yes." The man in the white coat speaks to the man in the booth: "I can help you stop smoking." The man in the booth replies: "What can you do?" The man in the white coat speaks to the man in the booth: "I have a machine that will help you stop
+
+
+Current prompt:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he
+Draft successes:  0
+Final output:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he takes a 6 sided die and throws it up in the air. it lands on a 1. He then takes a second die and throws it up in the air. it lands on a 2. He then takes a third die and throws it up in the air. it lands on a 3. He then takes a fourth die and throws it up in the air. it lands on a 4. He then takes a fifth die and throws it up in the air. it lands on a 5. He then takes a sixth die and throws it up in the air. it lands on a 6. He then takes the rubik's cube and puts it on top of the die that landed on a 1. He then takes the die that landed on a 2 and puts it on top of the die that landed on a 1. He then takes the die that landed on a 3 and puts it on top of the die
+
+
+Current prompt:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we
+Draft successes:  0
+Final output:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see the chair on the ground.
+A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see the chair on the ground.1:23:18:36:34:12:41:18:15:12:25:15:17:15:16:15:17:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15:16:15
+[2024-11-30 15:03:45,411] [INFO] [launch.py:351:main] Process 864412 exits successfully.
+
+
+The runtime is 68.38779330253601
