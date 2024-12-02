@@ -10,19 +10,22 @@ class test:
         self.drafter1 = None
         self.drafter2 = None
         self.num_spec_tokens = None
+        self.switch_threshold = None
 
-    def __init__(self, oracle, USE_DRAFTER, drafter1, drafter2, num_spec_tokens):
+    def __init__(self, oracle, USE_DRAFTER, drafter1, drafter2, num_spec_tokens, switch_threshold):
         self.oracle = oracle
         self.USE_DRAFTER = USE_DRAFTER
         self.drafter1 = drafter1
         self.drafter2 = drafter2
         self.num_spec_tokens = num_spec_tokens
+        self.switch_threshold = switch_threshold
 
     def print(self):
         print(f"\t\t{PINK}Oracle{ENDC} = {self.oracle}")
         print(f"\t\t{PINK}Drafter 1 Model{ENDC} = {self.drafter1}")
         print(f"\t\t{PINK}Drafter 2 Model{ENDC} = {self.drafter2}")
         print(f"\t\t{PINK}Number of speculative tokens{ENDC} = {self.num_spec_tokens}")
+        print(f"\t\t{PINK}Drafter switching threshold{ENDC} = {self.switch_threshold}%")
 
 def create_test_suite(config):
     tests = []
@@ -34,7 +37,7 @@ def create_test_suite(config):
     # TODO: Get rid of class and just use dictionary instead . . .
     # TODO: Add support for lists (so you can have a list of oracle models
     if bnd['active']:
-        testcase = test(bnd['oracle_model'], False, None, None, 0)
+        testcase = test(bnd['oracle_model'], False, None, None, 0, None)
         tests.append(testcase)
         cprint(CYAN, f"\tAdded baseline no draft test")
         testcase.print()
@@ -51,7 +54,7 @@ def create_test_suite(config):
             drafter_model_list = bsd['draft1_model']
             for oracle_model in oracle_model_list:
                 for drafter_model in drafter_model_list:
-                    testcase = test(oracle_model, True, drafter_model, None, nst)
+                    testcase = test(oracle_model, True, drafter_model, None, nst, None)
                     tests.append(testcase)
                     cprint(CYAN, f"\tAdded baseline single draft test")
                     testcase.print()
@@ -71,10 +74,12 @@ def create_test_suite(config):
 
             for oracle_model in oracle_model_list:
                 for i, drafter1_model in enumerate(drafter1_model_list):
-                    testcase = test(oracle_model, True, drafter1_model, drafter2_model_list[i], nst)
-                    tests.append(testcase)
-                    cprint(CYAN, f"\t Added double drafter model test")
-                    testcase.print()
+                    drafter_switch_threshold_list = dd['drafter_switch_threshold']
+                    for threshold in drafter_switch_threshold_list:
+                        testcase = test(oracle_model, True, drafter1_model, drafter2_model_list[i], nst, threshold)
+                        tests.append(testcase)
+                        cprint(CYAN, f"\t Added double drafter model test")
+                        testcase.print()
     return tests
 
 
@@ -135,6 +140,13 @@ def construct_test(testcase, run_script):
     replace_text = f"    max_tokens = {num_spec_tokens}"
     subprocess.run(f"cd .. && sed -i '/{search_text}/c\\{replace_text}' {run_script}", shell=True)
     test_info = update_test_info(test_info, f"Updating max_tokens to {num_spec_tokens} (number of speculative tokens generated)")
+
+    # Update the drafter switching threshold
+    threshold = testcase.switch_threshold
+    search_text = "drafter_switch_threshold   = "
+    replace_text = f"    drafter_switch_threshold   = {threshold}"
+    subprocess.run(f"cd .. && sed -i '/{search_text}/c\\{replace_text}' {run_script}", shell=True)
+    test_info = update_test_info(test_info, f"Updating drafter_switch_threshold to {threshold}%")
 
     return test_info
 

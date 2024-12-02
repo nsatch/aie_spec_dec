@@ -1,0 +1,87 @@
+[2024-12-01 16:47:48,972] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 16:47:50,261] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-12-01 16:47:50,261] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-12-01 16:47:51,331] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 16:47:52,519] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-12-01 16:47:52,519] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-12-01 16:47:52,519] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-12-01 16:47:52,519] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-12-01 16:47:52,519] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-12-01 16:47:52,527] [INFO] [launch.py:256:main] process 1362060 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-12-01 16:47:53,633] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-12-01 16:47:55,882] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 16:47:55,883] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 16:48:24,385] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 16:48:24,385] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 16:48:49,444] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 16:48:49,445] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man
+Draft successes:  25
+Prompt runtime = 9.85362696647644
+Final output:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man speaks to the camera: "I have a problem." A man in a white coat enters the booth and sits next to the man holding the pipe. The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You have a problem." The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You have a problem." The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You have a problem." The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You
+
+
+Current prompt:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he
+Draft successes:  20
+Prompt runtime = 10.01657748222351
+Final output:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he looks at the cube and says "I hate this cube. It's so hard to solve. I just can't get it right. I'm going to throw it out." The man picks up the cube and throws it out the window. The cube hits the ground and breaks into pieces. The man looks at the pieces and says "I hate this cube. It's so hard to solve. I just can't get it right. I'm going to throw it out." The man picks up the pieces and throws them out the window. The pieces hit the ground and break into smaller pieces. The man looks at the pieces and says "I hate this cube. It's so hard to solve. I just can't get it right. I'm going to throw it out." The man picks up the pieces and throws them
+
+
+Current prompt:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we
+Draft successes:  27
+Prompt runtime = 3.2987701892852783
+Final output:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see a woman's swing chair hanging from a tree.2021-12-18 13:45:04A child's swing chair is on the ground. A man is shown installing the chair
+
+
+Current prompt:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys
+Draft successes:  83
+Prompt runtime = 5.001033067703247
+Final output:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys and girls play football in a stadium. A man throws a ball in a stadium. A man throws a ball in a stadium. A man throws a
+
+
+Current prompt:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys
+Draft successes:  74
+Prompt runtime = 5.874118804931641
+Final output:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys start to fight. The lady runs off.2C
+1C
+The guy gets back into the car. The lady gets into the car. The guy drives off. The lady gets out
+
+
+Current prompt:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone.
+Draft successes:  24
+Prompt runtime = 4.8933703899383545
+Final output:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone. [step] You can pretend to be texting, but do it in a way that won't get noticed. Or, you can pretend to be reading a book, but still be able to see your phone. [title] Answer the phone. [step] Make sure you are quiet and don't say anything
+
+
+Current prompt:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men
+Draft successes:  44
+Prompt runtime = 2.381873369216919
+Final output:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing. People are surfing on waves on sea. Big waves are on the
+
+
+Current prompt:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band.
+Draft successes:  27
+Prompt runtime = 5.711878299713135
+Final output:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band. [step] If the resistor has more than 4 bands, the first 3 or 4 bands are the color code. [step] The additional bands are the tolerance code. [step] The color code is the value of the resistor. [step] The tolerance code is the tolerance of the resistor. [step] The tolerance code is the tolerance of
+
+
+Current prompt:   Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat
+Draft successes:  27
+Prompt runtime = 6.152337312698364
+Final output:   Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat.1. A man is shown standing in a tent, a woman is shown walking and a dog is shown. A man is shown feeding a dog. A man is shown looking at a dog, a man is shown standing and a dog is shown. A man is shown feeding a dog. A man is shown feeding a dog. A man is shown feeding a dog. A man is shown feeding a dog. A man is shown feeding a dog. A man is shown feeding a dog. A man is shown feeding a dog. A man is shown feeding a dog. A man is shown feeding a dog. A man is shown feeding a dog. A man is shown feeding a dog. A man is shown feeding a dog. A man is shown feeding a dog. A man is shown feeding a dog.
+
+
+Current prompt:   A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man
+Draft successes:  16
+Prompt runtime = 12.193455219268799
+Final output:   A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man walks across a tightrope, as seen from the view of the underside of the rope. a pan out of the river and a ferry is seen in hong kong. a man walks across a tightrope, as seen from the view of the underside of the rope. a pan out of the river and a ferry is seen in hong kong.
+A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong.
+A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong.11.2.3.4.5.6.7.8.9.10.
+[2024-12-01 16:49:56,657] [INFO] [launch.py:351:main] Process 1362060 exits successfully.
+
+
+The runtime is 130.51901817321777

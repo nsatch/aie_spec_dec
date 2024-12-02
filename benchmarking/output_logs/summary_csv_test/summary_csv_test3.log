@@ -1,0 +1,90 @@
+[2024-12-01 16:40:01,305] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 16:40:02,564] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-12-01 16:40:02,564] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-12-01 16:40:03,630] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 16:40:04,806] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-12-01 16:40:04,806] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-12-01 16:40:04,806] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-12-01 16:40:04,806] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-12-01 16:40:04,806] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-12-01 16:40:04,813] [INFO] [launch.py:256:main] process 1330181 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-12-01 16:40:05,906] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-12-01 16:40:23,827] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 16:40:23,828] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 16:40:54,741] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 16:40:54,742] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 16:41:18,636] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 16:41:18,637] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man
+Draft successes:  27
+Prompt runtime = 7.406475782394409
+Final output:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man speaks to the camera: "I have a problem." A man in a white coat enters the booth and sits next to the man holding the pipe. The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You have a problem." The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You have a problem." The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You have a problem." The white-coated man speaks to the camera: "This is a problem." The white-coated man speaks to the man holding the pipe: "You have a problem
+
+
+Current prompt:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he
+Draft successes:  37
+Prompt runtime = 5.870245933532715
+Final output:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he then walks to the wall and turns around and looks at the wall. He then sits back down and starts doing the rubik's cube again. He sets the cube down and stands up. He walks to the wall and turns around and looks at the wall. He then sits back down and starts doing the rubik's cube again. He sets the cube down and stands up. He walks to the wall and turns around and looks at the wall. He then sits back down and starts doing the rubik's cube again. He sets the cube down and stands up. He walks to the wall and turns around and looks at the wall. He then sits back down and starts doing the rubik's cube again. He sets the cube down and stands up. He walks to the wall and turns around
+
+
+Current prompt:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we
+Draft successes:  59
+Prompt runtime = 2.0480339527130127
+Final output:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see a woman in a red dress sitting in the chair. The camera pans out to show
+
+
+Current prompt:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys
+Draft successes:  33
+Prompt runtime = 6.8857786655426025
+Final output:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys play a game in a stadium. The man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys play a game in a stadium. The man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys play a game in a stadium. The man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys play a game in a stadium. The man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys play a game in a stadium. The man puts on a matador outfit in a room. A matador
+
+
+Current prompt:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys
+Draft successes:  40
+Prompt runtime = 4.46045184135437
+Final output:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys and the lady leave.1:33:442015-07-14 21:33:44:44
+The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys and the lady leave.10:33:44def dance_party(people, shoes):
+    """
+
+
+Current prompt:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone.
+Draft successes:  23
+Prompt runtime = 8.663334846496582
+Final output:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone. [step] Find a way to look at your phone without being noticed. This may be a small trick. [title] Get the phone out. [step] Get the phone out without being noticed. [title] Make sure that it is on. [step] Make sure that it is on. [title] Answer the phone. [step] Answer the phone. [title] Turn the phone off. [step] Turn the phone off. [title] Put it away. [step] Put it away. [title] Make sure that you are not caught. [step] Make sure that you are not caught. [title] Don't do it again. [step] Don't do it again. [title] The end. [step] The end.3d0c3e4d9a3b0
+
+
+Current prompt:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men
+Draft successes:  12
+Prompt runtime = 9.317306518554688
+Final output:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves. a lot of men are surfing on waves.The waves are high. People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves. a lot of men are surfing on waves. a lot of men are surfing on waves. a lot of men are surfing on waves. a lot of men are surfing on waves. a lot of men are surfing on waves. a lot of men are surfing on waves. a lot of men are surfing on waves. a lot of men are surfing on waves. a lot of men are surfing on waves. a lot of men are surfing on waves. a lot of men are surfing on waves. a lot of men are surfing on waves. a lot of men are surfing on waves. a lot of men are surfing on waves. a lot of men are surfing on waves
+
+
+Current prompt:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band.
+Draft successes:  94
+Prompt runtime = 2.841076374053955
+Final output:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band. [step] The first two bands
+
+
+Current prompt:   Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat
+Draft successes:  10
+Prompt runtime = 9.383277893066406
+Final output:   Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat and more shots of the dog and people.1
+Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat and more shots of the dog and people.by the end of the film the dog is sitting on a chair and a man is talking to it.1
+Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat and more shots of the dog and people. by the end of the film the dog is sitting on a chair and a man is talking to it.
+Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat and more shots of the dog and people. by the end of the film the dog is sitting on a chair and a man is talking to
+
+
+Current prompt:   A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man
+Draft successes:  11
+Prompt runtime = 9.755152702331543
+Final output:   A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man walks across a tightrope, as seen from the view of the underside of the rope. a pan out of the river and a ferry is seen in hong kong.superscript 3.2019-10-14T23:52:49Z
+A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong.3. 2019-10-14T23:52:49Z3. 2019-10-14T23:52:49Z
+A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong.defining a man's relationship to the world
+[2024-12-01 16:42:26,955] [INFO] [launch.py:351:main] Process 1330181 exits successfully.
+
+
+The runtime is 148.52052450180054

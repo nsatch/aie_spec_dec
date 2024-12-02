@@ -1,0 +1,84 @@
+[2024-12-01 17:03:36,545] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 17:03:37,710] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-12-01 17:03:37,710] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-12-01 17:03:38,779] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 17:03:39,971] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-12-01 17:03:39,971] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-12-01 17:03:39,971] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-12-01 17:03:39,971] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-12-01 17:03:39,971] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-12-01 17:03:39,980] [INFO] [launch.py:256:main] process 1431816 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-12-01 17:03:41,109] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-12-01 17:03:50,172] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 17:03:50,173] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 17:04:12,688] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 17:04:12,688] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 17:04:39,104] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 17:04:39,105] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man
+Draft successes:  0
+Prompt runtime = 10.871167421340942
+Final output:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man speaks to the camera: "I have a problem." A man in a white coat enters the booth and sits next to the man in the booth. The man in the white coat speaks to the man in the booth: "What is your problem?" The man in the booth replies: "I can't stop smoking." The man in the white coat speaks to the man in the booth: "How long have you been smoking?" The man in the booth replies: "I have been smoking for 30 years." The man in the white coat speaks to the man in the booth: "Do you want to stop smoking?" The man in the booth replies: "Yes." The man in the white coat speaks to the man in the booth: "I can help you stop smoking." The man in the booth replies: "What can you do?" The man in the white coat speaks to the man in the booth: "I have a machine that will help you stop smoking
+
+
+Current prompt:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he
+Draft successes:  41
+Prompt runtime = 5.16408371925354
+Final output:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he walks to a door, opens it, and walks out. He turns around and walks back into the room. He walks to the desk and picks up the rubik's cube. He walks to the door, opens it, and walks out. He turns around and walks back into the room. He walks to the desk and puts the rubik's cube down. He walks to the door, opens it, and walks out. He turns around and walks back into the room. He walks to the desk and picks up the rubik's cube. He walks to the door, opens it, and walks out. He turns around and walks back into the room. He walks to the desk and puts the rubik's cube down. He walks to the door, opens it
+
+
+Current prompt:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we
+Draft successes:  43
+Prompt runtime = 5.4506213665008545
+Final output:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see a shot of a child in the swing chair.The man is shown installing the chair onto a set. then we see a shot of a child in the swing chair.1. A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see a shot of a child in the swing chair. then we see a shot of a child in the swing chair. then we see a shot of a child in the swing chair. then we see a shot of a child in the swing chair. then we see a shot of a child in the swing chair. then we see a shot of a child in the swing chair. then we see a shot of a child in the swing chair
+
+
+Current prompt:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys
+Draft successes:  43
+Prompt runtime = 4.500841379165649
+Final output:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys are playing football in a stadium. A man is fighting with a matador in a stadium. A man is fighting with a matador in a stadium. A man is fighting with a matador in a stadium. A man is fighting with a matador in a stadium. A man is fighting with a matador in a stadium. A man is fighting with a matador in a stadium. A man is fighting with a matador in a stadium. A man is fighting with a matador in a stadium. A man is fighting with a matador in a stadium. A man is fighting with a matador in a stadium. A man is fighting with a matador in a stadium. A man is fighting with a matador in a stadium. A man
+
+
+Current prompt:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys
+Draft successes:  45
+Prompt runtime = 7.431450843811035
+Final output:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys cheer.2021-06-28 17:25:19from the way you've been acting
+The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys cheer.1.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3.3
+
+
+Current prompt:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone.
+Draft successes:  23
+Prompt runtime = 9.10549259185791
+Final output:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone. [step] If you are in a classroom, you might be able to do this by looking out the window, but make sure you are not seen. [title] Find a way to answer the call. [step] You might be able to answer the call by putting your phone to your ear and then putting your head down on the desk or table. [title] Make sure that you don't get caught. [step] Make sure that you don't get caught by either the teacher or the person on the other end of the line. [title] After you are done, put your phone away and continue with the lesson. [title] Make sure that you don't get caught. [step] Make sure that you don't get caught by either the teacher or the person on the other end of the line. [title] After you are done
+
+
+Current prompt:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men
+Draft successes:  0
+Prompt runtime = 11.489469766616821
+Final output:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea. People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea. People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea. People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea. People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea. People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea. People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea. People are surfing on waves on sea.
+
+
+Current prompt:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band.
+Draft successes:  24
+Prompt runtime = 8.859847068786621
+Final output:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band. [step] The first color is the first digit. [step] The second color is the second digit. [step] The third color is the third digit. [step] The fourth color is the fourth digit. [step] If there are 5 bands, the fifth color is the fifth digit. [step] The first color is the first digit. [step] The second color is the second digit. [step] The third color is the third digit. [step] The fourth color is the fourth digit. [step] The fifth color is the fifth digit. [step] The sixth color is the multiplier. [step] The first color is the first digit. [step] The second color is the second digit. [step] The third color is the third digit. [step] The fourth color is the fourth digit. [
+
+
+Current prompt:   Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat
+Draft successes:  32
+Prompt runtime = 6.648465871810913
+Final output:   Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat, the dog is shown. A man is seen in a boat and a dog is shown. The boat is shown and then a man is shown with a dog. A man is shown with a dog. A dog is shown. A man is shown with a dog. A dog is shown. A man is shown with a dog. A dog is shown. A man is shown with a dog. A man is shown with a dog. A dog is shown. A man is shown with a dog. A man is shown with a dog. A man is shown with a dog. A man is shown with a dog. A man is shown with a dog. A man is shown with a dog. A man is shown with a dog. A man is shown with a dog. A man is shown with a dog
+
+
+Current prompt:   A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man
+Draft successes:  13
+Prompt runtime = 10.678956031799316
+Final output:   A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man in a suit walks across a tightrope, as seen from the view of the underside of the rope. a pan out of the river and a ferry is seen in hong kong. a man in a suit walks across a tightrope, as seen from the view of the underside of the rope. a pan out of the river and a ferry is seen in hong kong. a man in a suit walks across a tightrope, as seen from the view of the underside of the rope. a pan out of the river and a ferry is seen in hong kong. a man in a suit walks across a tightrope, as seen from the view of the underside of the rope. a pan out of the river and a ferry is seen in hong kong. a man in a suit walks across a tightrope, as seen from the view of the underside
+[2024-12-01 17:06:01,124] [INFO] [launch.py:351:main] Process 1431816 exits successfully.
+
+
+The runtime is 147.40261435508728

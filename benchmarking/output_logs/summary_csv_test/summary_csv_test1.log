@@ -1,0 +1,77 @@
+[2024-12-01 16:36:01,129] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 16:36:02,384] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-12-01 16:36:02,384] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-12-01 16:36:03,482] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 16:36:04,725] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-12-01 16:36:04,725] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-12-01 16:36:04,725] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-12-01 16:36:04,725] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-12-01 16:36:04,725] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-12-01 16:36:04,734] [INFO] [launch.py:256:main] process 1304933 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-12-01 16:36:05,855] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = False
+1 0 0
+[2024-12-01 16:36:08,131] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 16:36:08,132] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 16:36:40,683] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 16:36:40,683] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 16:37:07,166] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 16:37:07,166] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man
+Prompt runtime = 3.507594585418701
+Final output:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man speaks to the camera: "I have a problem." A man in a white coat enters the booth and sits next to the man in the booth. The man in the white coat speaks to the man in the booth: "What is your problem?" The man in the booth replies: "I can't stop smoking." The man in the white coat speaks to the man in the booth: "How long have you been smoking?" The man in the booth replies: "I have been smoking for 30 years." The man in the white coat speaks to the man in the booth: "Do you want to stop smoking?" The man in the booth replies: "Yes." The man in the white coat speaks to the man in the booth: "I can help you stop smoking." The man in the booth replies: "What can you do?" The man in the white coat speaks to the man in the booth: "I have a machine that will help you stop smoking." The man
+
+
+Current prompt:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he
+Prompt runtime = 2.721001148223877
+Final output:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he says "Hey, I'm a programmer, and I'm going to show you how to do this in less than 30 seconds!" he says as he picks up the rubik's cube again. He starts to solve the rubik's cube. He solves the rubik's cube in less than 30 seconds, and then says "You see, it's really not that hard to do this. I'm going to show you how to do this in less than 30 seconds!" he says as he picks up the rubik's cube again. He starts to solve the rubik's cube. He solves the rubik's cube in less than 30 seconds, and then says "You see, it's really not that hard to do this. I'm going to show you how to do this in less than 30 seconds!" he says as he picks up the rubik's cube again. He starts to solve the rubik's cube. He solves the rubik's
+
+
+Current prompt:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we
+Prompt runtime = 0.12609457969665527
+Final output:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see the swing chair on the ground.
+
+
+Current prompt:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys
+Prompt runtime = 2.7251102924346924
+Final output:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys are playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man is playing with a football in a stadium. A man
+
+
+Current prompt:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys
+Prompt runtime = 0.1652536392211914
+Final output:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys in the audience give the lady a standing ovation.
+
+
+Current prompt:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone.
+Prompt runtime = 2.7466928958892822
+Final output:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone. [step] There are a few ways to do this, but here are the most common. 1. Look at your phone with one eye closed and the other open. 2. Look at your phone with one eye closed and the other open. 3. Look at your phone with one eye closed and the other open. 4. Look at your phone with one eye closed and the other open. 5. Look at your phone with one eye closed and the other open. 6. Look at your phone with one eye closed and the other open. 7. Look at your phone with one eye closed and the other open. 8. Look at your phone with one eye closed and the other open. 9. Look at your phone with one eye closed and the other open. 10. Look at your phone with one eye closed and the other open. 11. Look at your phone with one eye closed and the other open. 12.
+
+
+Current prompt:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men
+Prompt runtime = 1.2319355010986328
+Final output:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on sea.
+People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on sea.
+People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on sea.
+People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on sea.
+
+
+Current prompt:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band.
+Prompt runtime = 2.748934507369995
+Final output:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band. [title] The first color band is the first digit of the resistor value. [title] The second color band is the multiplier. [title] The third color band is the tolerance. [title] The fourth color band is the second digit of the resistor value. [title] The fifth color band is the third digit of the resistor value. [title] The sixth color band is the fourth digit of the resistor value. [title] The seventh color band is the fifth digit of the resistor value. [title] The eighth color band is the sixth digit of the resistor value. [title] The ninth color band is the seventh digit of the resistor value. [title] The tenth color band is the eighth digit of the resistor value. [title] The eleventh color band is the ninth digit of the resistor value. [title] The twelfth color band is the tenth digit of the resistor value. [title] The thirteenth color band is the eleventh digit
+
+
+Current prompt:   Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat
+Prompt runtime = 0.5767009258270264
+Final output:   Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat and a man in a boat. The camera then moves to a man in a boat and he waves to the camera. The camera then moves to a man on a boat and he waves to the camera.
+
+
+Current prompt:   A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man
+Prompt runtime = 1.0269017219543457
+Final output:   A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man walks across a tightrope, as seen from the view of the underside of the rope. a pan out of the river and a ferry is seen in hong kong.
+A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong.
+[2024-12-01 16:37:26,817] [INFO] [launch.py:351:main] Process 1304933 exits successfully.
+
+
+The runtime is 88.50075840950012

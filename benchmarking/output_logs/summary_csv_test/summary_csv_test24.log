@@ -1,0 +1,99 @@
+[2024-12-01 17:37:38,744] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 17:37:39,957] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-12-01 17:37:39,957] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-12-01 17:37:41,054] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 17:37:42,209] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-12-01 17:37:42,209] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-12-01 17:37:42,209] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-12-01 17:37:42,209] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-12-01 17:37:42,209] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-12-01 17:37:42,217] [INFO] [launch.py:256:main] process 1559359 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-12-01 17:37:43,308] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-12-01 17:37:45,505] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 17:37:45,507] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 17:38:14,638] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 17:38:14,638] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 17:38:16,518] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 17:38:16,518] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man
+Draft successes:  9
+Prompt runtime = 14.759205341339111
+Final output:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man speaks to the camera: "I have a problem." A man in a white coat enters the booth and sits next to the man in the booth. The man in the white coat speaks to the man in the booth: "What is your problem?" The man in the booth replies: "I can't stop smoking." The man in the white coat speaks to the man in the booth: "How long have you been smoking?" The man in the booth replies: "I have been smoking for 30 years." The man in the white coat speaks to the man in the booth: "What do you think about smoking?" The man in the booth replies: "I think it's bad." The man in the white coat speaks to the man in the booth: "Do you think you could quit smoking?" The man in the booth replies: "No, I can't quit smoking." The man in the
+
+
+Current prompt:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he
+Draft successes:  2
+Prompt runtime = 16.07524585723877
+Final output:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he walks over to a computer and starts typing. He types "cube" and hits enter. The computer then says "cube found, 6.4.15.10.24.12.15.21.15.13.15.23.15.10.21.24.12.15.21.15.13.15.23.15.10.21.24.12.15.21.15.13.15.23.15.10.21.24.12.15.21.15.13.15.23.15.10.21.24.12.15.21.15.13.15.23.15.10.21.24.12.15.21.15.13.15.23.15.10.21.24.12.15.21.15.13.15.23.15.10.21.
+
+
+Current prompt:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we
+Draft successes:  1
+Prompt runtime = 16.051095247268677
+Final output:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see a young boy sitting in the swing chair, a woman is shown in the background.1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/2/1/
+
+
+Current prompt:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys
+Draft successes:  24
+Prompt runtime = 12.433966398239136
+Final output:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys play a game in a field. A boy sits on a matador's head in a room. A man sits on a matador's head in a room. A boy sits on a matador's head in a room. A man sits on a matador's head in a room. A boy sits on a matador's head in a room. A man sits on a matador's head in a room. A boy sits on a matador's head in a room. A man sits on a matador's head in a room. A boy sits on a matador's head in a room. A man sits on a matador's head in a room. A boy sits on a matador's head in a room. A man sits on a matador's head in a room. A boy sits on
+
+
+Current prompt:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys
+Draft successes:  18
+Prompt runtime = 14.028361320495605
+Final output:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys give the lady a rose. The lady gives the guy a kiss. The lady and the guy start to walk away. The guy starts to run after the lady. The lady stops and turns around. The lady and the guy kiss. The lady and the guy start to walk away. The guy starts to run after the lady. The lady stops and turns around. The lady and the guy kiss. The lady and the guy start to walk away. The guy starts to run after the lady. The lady stops and turns around. The lady and the guy kiss. The lady and the guy start to walk away. The guy starts to run after the lady. The lady stops and turns around. The lady and the guy kiss. The lady and the guy start to walk away. The guy starts to run after the lady. The lady stops and turns around. The
+
+
+Current prompt:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone.
+Draft successes:  4
+Prompt runtime = 16.886141777038574
+Final output:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone. [step] Look for a way to look at your phone without being seen. This could be by hiding it behind your book, in your backpack, or in your lap. [title] Answer the call. [step] Answer the call. [title] End the call. [step] End the call. [title] Put your phone away. [step] Put your phone away. [title] Try to act like nothing happened. [step] Try to act like nothing happened. [title] Go back to class. [step] Go back to class. [title] Repeat the process. [step] Repeat the process. [title] Repeat the process. [step] Repeat the process. [title] Repeat the process. [step] Repeat the process. [title] Repeat the process. [step] Repeat the process. [title] Repeat the process. [step] Repeat the process. [title
+
+
+Current prompt:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men
+Draft successes:  13
+Prompt runtime = 13.917113780975342
+Final output:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea.
+a lot of men are surfing on waves on sea.
+People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea.
+a lot of men are surfing on waves on sea.
+People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea.
+a lot of men are surfing on waves on sea.
+People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea.
+a lot of men are surfing on waves on sea.
+People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea.
+a lot of men are surfing on
+
+
+Current prompt:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band.
+Draft successes:  13
+Prompt runtime = 15.53846788406372
+Final output:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band. [title] The first color band is the resistor's color code. [title] The second color band is the tolerance code. [title] The third color band is the multiplier. [title] The fourth color band is the multiplier. [title] The fifth color band is the multiplier. [title] The sixth color band is the multiplier. [title] The seventh color band is the multiplier. [title] The eighth color band is the multiplier. [title] The ninth color band is the multiplier. [title] The tenth color band is the multiplier. [title] The eleventh color band is the multiplier. [title] The twelfth color band is the multiplier. [title] The thirteenth color band is the multiplier. [title] The fourteenth color band is the multiplier. [title] The fifteenth color band is the multiplier. [title]
+
+
+Current prompt:   Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat
+Draft successes:  4
+Prompt runtime = 15.803488969802856
+Final output:   Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat and a person putting a hat on a dog.
+Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat and a person putting a hat on a dog.2010-01-27 00:00:00
+Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat and a person putting a hat on a dog.The 2010-01-27 00:00:002010-01-27 00:00:00
+Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat and a person putting a hat on a dog.2010-01-27 00:00:00
+Various shots of scenery are shown and leads to
+
+
+Current prompt:   A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man
+Draft successes:  22
+Prompt runtime = 13.80827784538269
+Final output:   A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man walks across a tightrope, as seen from the view of the underside of the rope. a pan out of the river and a ferry is seen in hong kong.
+A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong.
+A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong.1.1.from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong.
+A man walks across a tightrope, as seen from the view of the underside of the rope
+[2024-12-01 17:40:46,411] [INFO] [launch.py:351:main] Process 1559359 exits successfully.
+
+
+The runtime is 190.48189902305603

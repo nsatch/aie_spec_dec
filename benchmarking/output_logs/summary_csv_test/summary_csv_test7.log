@@ -1,0 +1,83 @@
+[2024-12-01 16:49:59,579] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 16:50:00,867] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-12-01 16:50:00,867] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-12-01 16:50:01,920] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 16:50:03,106] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-12-01 16:50:03,106] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-12-01 16:50:03,106] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-12-01 16:50:03,106] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-12-01 16:50:03,106] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-12-01 16:50:03,113] [INFO] [launch.py:256:main] process 1374658 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-12-01 16:50:04,257] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-12-01 16:50:07,370] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 16:50:07,371] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 16:50:09,119] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 16:50:09,119] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 16:50:31,569] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 16:50:31,569] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man
+Draft successes:  21
+Prompt runtime = 13.810831785202026
+Final output:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man speaks to the camera: "I have a problem." A man in a white coat enters the booth and sits next to the man in the booth. The man in the white coat holds up one end of the pipe. The man in the white coat speaks to the camera: "I have a problem." The man in the white coat speaks to the man in the booth: "I don't think it's the pipe." The man in the white coat speaks to the camera: "I think it's the man." The man in the white coat speaks to the man in the booth: "Maybe we should get another man." The man in the white coat speaks to the camera: "I think it's the man." The man in the white coat speaks to the man in the booth: "Maybe we should get another man." The man in the
+
+
+Current prompt:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he
+Draft successes:  13
+Prompt runtime = 14.616586446762085
+Final output:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he says "i can't figure out how to solve this puzzle." He sits back down and tries to solve the puzzle. He tries to solve the puzzle for 1 hour and 10 minutes. He stands up and says "i can't figure out how to solve this puzzle." He sits back down and tries to solve the puzzle. He tries to solve the puzzle for 1 hour and 10 minutes. He stands up and says "i can't figure out how to solve this puzzle." He sits back down and tries to solve the puzzle. He tries to solve the puzzle for 1 hour and 10 minutes. He stands up and says "i can't figure out how to solve this puzzle." He sits back down and tries to solve the puzzle. He tries to solve the puzzle for 1 hour and 10 minutes. He stands up and says "i can't figure
+
+
+Current prompt:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we
+Draft successes:  41
+Prompt runtime = 10.969585657119751
+Final output:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see a child sitting in the swing chair. A woman is shown in the chair. A man is shown in the swing chair. A woman is shown in the swing chair. A man is shown in the swing chair. A woman is shown in the swing chair. A man is shown in the swing chair. A woman is shown in the swing chair. A man is shown in the swing chair. A woman is shown in the swing chair. A man is shown in the swing chair. A woman is shown in the swing chair. A man is shown in the swing chair. A woman is shown in the swing chair. A man is shown in the swing chair. A woman is shown in the swing chair. A man is shown in the swing
+
+
+Current prompt:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys
+Draft successes:  26
+Prompt runtime = 11.977578401565552
+Final output:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys are dressed in a red costume and play a game of hide-and-seek. A boy is dressed in a red costume and plays a game of hide-and-seek. A boy is dressed in a red costume and plays a game of hide-and-seek. A boy is dressed in a red costume and plays a game of hide-and-seek. A boy is dressed in a red costume and plays a game of hide-and-seek. A boy is dressed in a red costume and plays a game of hide-and-seek. A boy is dressed in a red costume and plays a game of hide-and-seek. A boy is dressed in a red costume and plays a game of hide-and-seek. A boy is dressed in a red costume and plays a game of hide-and-seek. A boy is dressed in a
+
+
+Current prompt:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys
+Draft successes:  28
+Prompt runtime = 12.827452182769775
+Final output:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys and gals cheer. The lady runs off. The guy and gals cheer.You can see the guy and gals cheering and clapping. The guy and gals cheer and clap.The guy and gals cheer and clap. The guy and gals cheer and clap. The guy and gals cheer and clap. The guy and gals cheer and clap. The guy and gals cheer and clap. The guy and gals cheer and clap. The guy and gals cheer and clap. The guy and gals cheer and clap. The guy and gals cheer and clap. The guy and gals cheer and clap. The guy and gals cheer and clap. The guy and gals cheer and clap. The guy and gals cheer and clap. The guy and g
+
+
+Current prompt:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone.
+Draft successes:  15
+Prompt runtime = 15.24012804031372
+Final output:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone. [step] If you have a flip phone, you can turn it around and look at the screen. If you have a touch screen, you can type something on the screen so it looks like you are typing a message. [title] Type something. [step] Type something that makes you look like you are typing a message. [title] Type something else. [step] Type something that makes you look like you are typing a message. [title] Type something else. [step] Type something that makes you look like you are typing a message. [title] Type something else. [step] Type something that makes you look like you are typing a message. [title] Type something else. [step] Type something that makes you look like you are typing a message. [title] Type something else. [step] Type something that makes you look like
+
+
+Current prompt:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men
+Draft successes:  11
+Prompt runtime = 14.398631811141968
+Final output:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves. big waves on the sea.5.The Big Bang Theory is a science fiction television series created by Chuck Loris and Bill Prady, both of whom are American. The series is a comedy about four scientists and their lives in the high-energy world of physics. It is a multi-camera sitcom. It first aired on CBS on September 24, 2007 and it is still running. The Big Bang Theory is a very popular show in the US. The show has been very successful in the US. It is one of the most watched TV shows in the US. The Big Bang Theory is a very popular show in the US. The show has been very successful in the US. It is one of the most watched TV shows in the US. The Big Bang Theory is a very popular show in the US. The show has been very successful in
+
+
+Current prompt:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band.
+Draft successes:  3
+Prompt runtime = 16.63467812538147
+Final output:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band. [step] The first color band is the first digit of the resistor value. [step] The second color band is the multiplier. [step] The third color band is the tolerance. [step] The fourth color band is the manufacturer's code. [title] If the fourth color band is a gold band, the resistor is a 5% tolerance. [title] If the fourth color band is a silver band, the resistor is a 10% tolerance. [title] If the fourth color band is a black band, the resistor is a 20% tolerance. [title] If the fourth color band is a red band, the resistor is a 25% tolerance. [title] If the fourth color band is a yellow band, the resistor is a 30% tolerance. [title] If the fourth color band is a green band, the resistor is a 40% tolerance. [title] If the
+
+
+Current prompt:   Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat
+Draft successes:  27
+Prompt runtime = 12.68009090423584
+Final output:   Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat and the person pulling the rope. The person is then shown in a close up.1. The person is then shown again in a close up. The person is then shown again in a close up. The person is then shown again in a close up. The person is then shown again in a close up. The person is then shown again in a close up. The person is then shown again in a close up. The person is then shown again in a close up. The person is then shown again in a close up. The person is then shown again in a close up. The person is then shown again in a close up. The person is then shown again in a close up. The person is then shown again in a close up. The person is then shown again in a close up. The
+
+
+Current prompt:   A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man
+Draft successes:  29
+Prompt runtime = 12.940192937850952
+Final output:   A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man walks across a tightrope, as seen from the
+[2024-12-01 16:52:49,282] [INFO] [launch.py:351:main] Process 1374658 exits successfully.
+
+
+The runtime is 172.56643533706665

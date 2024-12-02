@@ -38,9 +38,11 @@ if __name__ == "__main__":
     # Run the test and collect its output; time runtime
     cprint(YELLOW, f"\nConstructing test suite")
     tests = create_test_suite(config)
+
     cprint(CYAN, "\nStarting tests")
     # TODO: Link test to test_name via class?
     test_suite_start = time()
+    testcases_summary = []
     for i, testcase in enumerate(tests):
         testcase_num = i+1
         cprint(YELLOW, f"\nConstructing test {testcase_num} of {len(tests)}")
@@ -50,7 +52,7 @@ if __name__ == "__main__":
         # TODO: Print test details
         #   - Drafter enabled? What are drafters, input prompt number, size of main model
         #test_name = "test2"
-        test_name = config['test_name'] + testcase_num
+        test_name = config['test_name'] + str(testcase_num)
         output_log = os.path.join(OUTPUT_DIR, test_name) + ".log"
         output_error_log = os.path.join(OUTPUT_DIR, test_name + "_error") + ".log"
         output_log2 = os.path.join(OUTPUT_DIR2, test_name) + ".log"
@@ -69,6 +71,10 @@ if __name__ == "__main__":
         end = time()
 
         cprint(GREEN, f"\n Done running test {testcase_num}!")
+
+
+
+        # Log results and post processing
         # TODO: Looks like runtime is inflated due to setup time? May need to go into param code
         # to put PCs in there. This will be called full_runtime?
         testcase_runtime = end - start
@@ -76,8 +82,12 @@ if __name__ == "__main__":
         # TODO: Verify that run succeeded
         write_test_info(output_log2, test_info)
         write_runtime(output_log2, testcase_runtime)
-        verify_testcase_status(output_log2)
         #write_test_log(output_log, runtime)
+        testcases_summary = add_testcase_to_summary(testcase, output_log2, testcases_summary)
+        # Update the summary csv after a testcase instead of waiting til all complete in case
+        # we need to stop the program early
+        summary_csv_loc = os.path.join(OUTPUT_DIR2, f"{config['test_name']}_summary.csv")
+        testcases_summary_to_csv(testcases_summary, summary_csv_loc)
     test_suite_end = time()
 
     test_suite_runtime = test_suite_end - test_suite_start

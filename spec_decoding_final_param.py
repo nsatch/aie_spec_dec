@@ -1,5 +1,6 @@
 ##### CODE ADAPTED FROM: https://github.com/uw-mad-dash/decoding-speculative-decoding/blob/main/spec_decoding_deployment.py #####
 
+from time import time
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -182,7 +183,7 @@ if __name__ == "__main__":
     print(world_size, rank, local_rank)
     os.environ['TRANSFORMERS_CACHE'] = "cache"  # Replace with your transformers cache directory
 
-    test_json = json_loader("benchmarking/prompts/hellaswag_sorted_acceptance_topn_3.json")
+    test_json = json_loader("benchmarking/prompts/hellaswag_sorted_acceptance_topn_10.json")
 
     # Define the checkpoint dict. You may need to convert *.safetensors to
     # *.bin for this work. Make sure you get all the *.bin and *.pt files in
@@ -217,7 +218,7 @@ if __name__ == "__main__":
     tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-3B", torch_dtype=torch.float16)
 
     # Feel free to change it to the draft model of your choice
-    draft_model = AutoModelForCausalLM.from_pretrained("minghaoyan/Wide-Sheared-LLaMA-290M")
+    draft_model = AutoModelForCausalLM.from_pretrained("minghaoyan/Wide-Sheared-LLaMA-796M")
     draft_model.resize_token_embeddings(len(tokenizer))
 
 
@@ -233,7 +234,7 @@ if __name__ == "__main__":
     # Ashley, please take a look at this and see if this is set up correctly for draft 2
     ### START OF CODE ADDED BY NICK FOR DRAFT 2 ###
     # Feel free to change it to the draft model of your choice
-    draft2_model = AutoModelForCausalLM.from_pretrained("minghaoyan/Wide-Sheared-LLaMA-796M")
+    draft2_model = AutoModelForCausalLM.from_pretrained("rasyosef/Llama-3.2-180M-Amharic")
     draft2_model.resize_token_embeddings(len(tokenizer))
 
 
@@ -254,7 +255,9 @@ if __name__ == "__main__":
     # Percent threshold of length through the prompt where we switch between drafter models
     # Units: 50 = 50% 
     # NOT 0.5 = 50%
-    drafter_switch_threshold = 50
+    ### DON"T DELETE THE EXTRA SPACES!!!!
+    drafter_switch_threshold   = 75
+    ### DON"T DELETE THE EXTRA SPACES!!!!
     # Disable drafter toggle in one draft case. Can never be 200% of the way through a prompt!
     if not USE_DOUBLE_DRAFTER:
         drafter_switch_threshold = 200
@@ -267,6 +270,7 @@ if __name__ == "__main__":
 
     iteration = 0
     for data in test_json:
+        data_time_start = time()
         # I know this is an ugly way of doing it but I don't want to make fine grained changes
         # and screw up working code :(
         if USE_DRAFTER:
@@ -392,10 +396,13 @@ if __name__ == "__main__":
                 '''
 
 
+        data_time_end = time()
         if USE_DRAFTER:
             print("Draft successes: ", draft_successes)
+            print(f"Prompt runtime = {data_time_end - data_time_start}")
             print("Final output: ", tokenizer.decode(new_inputs[0], skip_special_tokens=True))
 
         if not USE_DRAFTER:
+            print(f"Prompt runtime = {data_time_end - data_time_start}")
             print("Final output: ", tokenizer.decode(target_model_guess[0], skip_special_tokens=True))
         #print(new_inputs.size())

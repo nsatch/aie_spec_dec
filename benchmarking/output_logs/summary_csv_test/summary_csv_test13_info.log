@@ -1,0 +1,8 @@
+Updating oracle model to meta-llama/Llama-3.2-3B
+Updating tokenizer to match oracle model (meta-llama/Llama-3.2-3B)
+Updating USE_DRAFTER to True
+Updating USE_DOUBLE_DRAFTER to True
+Updating draft model one to minghaoyan/Wide-Sheared-LLaMA-290M
+Updating draft model one to minghaoyan/Wide-Sheared-LLaMA-796M
+Updating max_tokens to 3 (number of speculative tokens generated)
+Updating drafter_switch_threshold to 75%

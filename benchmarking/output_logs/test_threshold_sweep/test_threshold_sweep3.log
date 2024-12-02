@@ -1,0 +1,39 @@
+[2024-12-01 12:57:35,634] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 12:57:36,796] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-12-01 12:57:36,796] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-12-01 12:57:37,872] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 12:57:39,105] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-12-01 12:57:39,105] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-12-01 12:57:39,105] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-12-01 12:57:39,105] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-12-01 12:57:39,105] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-12-01 12:57:39,112] [INFO] [launch.py:256:main] process 1166456 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-12-01 12:57:40,236] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-12-01 12:57:42,346] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 12:57:42,347] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 12:58:07,737] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 12:58:07,737] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 12:58:31,153] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 12:58:31,153] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man
+Draft successes:  0
+Final output:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man speaks to the camera: "I have a problem." A man in a white coat enters the booth and sits next to the man in the booth. The man in the white coat speaks to the man in the booth: "What is your problem?" The man in the booth replies: "I can't stop smoking." The man in the white coat speaks to the man in the booth: "How long have you been smoking?" The man in the booth replies: "I have been smoking for 30 years." The man in the white coat speaks to the man in the booth: "Do you want to stop smoking?" The man in the booth replies: "Yes." The man in the white coat speaks to the man in the booth: "I can help you stop smoking." The man in the booth replies: "What can you do?" The man in the white coat speaks to the man in the booth: "I have a machine that will
+
+
+Current prompt:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he
+Draft successes:  0
+Final output:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he walks over to the door and opens it. He steps out into the hallway. He turns around and walks back into his office. He walks over to the desk and picks up the rubik's cube. He puts the rubik's cube down and stands up. He walks over to the door and opens it. He steps out into the hallway. He turns around and walks back into his office. He walks over to the desk and picks up the rubik's cube. He puts the rubik's cube down and stands up. He walks over to the door and opens it. He steps out into the hallway. He turns around and walks back into his office. He walks over to the desk and picks up the rubik's cube. He puts the rubik's cube down and stands up. He walks over to the door and opens it. He steps out into the hallway. He turns around and walks back into his office. He walks over
+
+
+Current prompt:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we
+Draft successes:  0
+Final output:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see the swing in motion.
+A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see the swing in motion.We see a woman walking away from the camera. She stops and looks around. She walks up to a swing and sits down. She looks around again and walks away. She returns and sits down again. She looks around again and walks away. She returns and sits down again. She looks around again and walks away. She returns and sits down again. She looks around again and walks away. She returns and sits down again. She looks around again and walks away. She returns and sits down again. She looks around again and walks away. She returns and sits down again. She looks around again and walks away. She returns and sits down again. She looks around again and walks away. She returns and sits down again. She looks around again and walks away.
+[2024-12-01 12:59:10,203] [INFO] [launch.py:351:main] Process 1166456 exits successfully.
+
+
+The runtime is 97.416987657547

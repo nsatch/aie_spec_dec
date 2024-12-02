@@ -1,0 +1,108 @@
+[2024-12-01 17:34:17,036] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 17:34:18,302] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-12-01 17:34:18,302] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None spec_decoding_final_param.py
+[2024-12-01 17:34:19,389] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-01 17:34:20,634] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-12-01 17:34:20,634] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-12-01 17:34:20,634] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-12-01 17:34:20,634] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-12-01 17:34:20,634] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-12-01 17:34:20,642] [INFO] [launch.py:256:main] process 1552724 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'spec_decoding_final_param.py', '--local_rank=0']
+[2024-12-01 17:34:21,755] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Sanity Check: USE_DRAFTER  = True
+1 0 0
+[2024-12-01 17:34:23,866] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 17:34:23,867] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 17:34:59,153] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 17:34:59,153] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-12-01 17:35:03,728] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-12-01 17:35:03,728] [INFO] [logging.py:128:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+
+
+Current prompt:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man
+Draft successes:  16
+Prompt runtime = 14.120646953582764
+Final output:   A man is sitting at a booth surrounded by pipes, talking and gesturing. The man holds up one end of the pipe. the man speaks to the camera: "I have a problem." A man in a white coat enters the booth and sits next to the man in the booth. The man in the white coat speaks to the man in the booth: "What is your problem?" The man in the booth speaks to the camera: "My pipe has a leak." The man in the white coat speaks to the man in the booth: "Why do you think your pipe has a leak?" The man in the booth speaks to the camera: "Because it's leaking." The man in the white coat speaks to the man in the booth: "How do you know it's leaking?" The man in the booth speaks to the camera: "Because it's leaking." The man in the white coat speaks to the man in the booth: "Do you have any other evidence that it's leaking?" The man
+
+
+Current prompt:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he
+Draft successes:  3
+Prompt runtime = 15.817739248275757
+Final output:   A man is siting behind a desk doing a rubik's cube. He sets the rubik's cube down and stands up. he looks at the rubik's cube and then at the camera. He then sits back down and starts to solve the rubik's cube again.1.def solve_cube():
+    cube = rubik's cube
+    for i in range(1, 3):
+        for j in range(1, 4):
+            for k in range(1, 5):
+                for l in range(1, 6):
+                    for m in range(1, 7):
+                        for n in range(1, 8):
+                            for o in range(1, 9):
+                                for p in range(1, 10):
+                                    for q in range(1, 11):
+                                        for r in range(1, 12):
+                                            for s in range(1, 13):
+                                                for t in range(1, 14):
+                                                    for u in range(1, 
+
+
+Current prompt:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we
+Draft successes:  11
+Prompt runtime = 14.900804281234741
+Final output:   A child's swing chair is on the ground. A man is shown installing the chair onto a set. then we see the chair on the ground. then we see the chair on the set.defining the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we see the chair on the set. then we
+
+
+Current prompt:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys
+Draft successes:  31
+Prompt runtime = 12.595603227615356
+Final output:   A man puts on a matador outfit in a room. A matador fights with a bowl using a red cape in a stadium. boys are playing in a field.Chase him. A man is running in a stadium. A man is playing with a matador costume in a room. A man is playing with a matador costume in a room. A man is playing with a matador costume in a room. A man is playing with a matador costume in a room. A man is playing with a matador costume in a room. A man is playing with a matador costume in a room. A man is playing with a matador costume in a room. A man is playing with a matador costume in a room. A man is playing with a matador costume in a room. A man is playing with a matador costume in a room. A man is playing with a matador costume in
+
+
+Current prompt:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys
+Draft successes:  10
+Prompt runtime = 14.994761228561401
+Final output:   The lady takes off her helmet. A guy gives the lady her white sandals. The lady blows a kiss. guys say "hey" and "nice" and "what up" and "good lookin" and "nice ride" and "nice helmet" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "nice boots" and "
+
+
+Current prompt:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone.
+Draft successes:  6
+Prompt runtime = 16.441123485565186
+Final output:   [header] How to answer a cell phone in class [title] Make sure that nobody is watching you. [step] Look around and check out the faculty around you; make sure they aren't interested in what you are doing. However, realize that teachers see a lot more than they let on... [title] Find a way to look at your phone. [step] If you are in a class with a computer, use the computer to look at your phone. [title] Turn off your phone. [step] Turn off your phone. [title] Take a look at your phone. [step] Take a quick look at your phone. [title] Answer your phone. [step] Answer your phone. [title] Hang up. [step] Hang up. [title] Take a look around. [step] Take a look around to make sure nobody saw you. [title] Put your phone away. [step] Put your phone away. [title] Return to class. [step] Return to class. [title] Make sure you are not looking at your phone. [step] Make sure you are not looking at your phone. [title] Make sure your phone is turned off. [step] Make sure your phone is turned off.
+
+
+Current prompt:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men
+Draft successes:  16
+Prompt runtime = 14.197411060333252
+Final output:   People are surfing on waves on sea. Big waves are on the sea and men are surfing. a lot of men are surfing on waves on sea.Chilean surfers take on huge waves on the Pacific Ocean
+Chilean surfers take on huge waves on the Pacific Ocean
+Chilean surfers take on huge waves on the Pacific Ocean
+Chilean surfers take on huge waves on the Pacific Ocean
+Chilean surfers take on huge waves on the Pacific Ocean
+Chilean surfers take on huge waves on the Pacific Ocean
+Chilean surfers take on huge waves on the Pacific Ocean
+Chilean surfers take on huge waves on the Pacific Ocean
+Chilean surfers take on huge waves on the Pacific Ocean
+Chilean surfers take on huge waves on the Pacific Ocean
+Chilean surfers take on huge waves on the Pacific Ocean
+Chilean surfers take on huge waves on the Pacific
+
+
+Current prompt:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band.
+Draft successes:  5
+Prompt runtime = 16.34746217727661
+Final output:   [header] How to identify resistors [title] Axial resistors are cylindrical with leads extending from each end. [title] Look at the resistor so the group of 3 or 4 color bands are on the left side. [step] These are sometimes followed by a gap, then an additional color band. [title] If the resistor is marked with a gold band, the value of the resistor is in the middle of the gold band. [title] If the resistor is marked with a black band, the value of the resistor is in the middle of the black band. [title] If the resistor is marked with a silver band, the value of the resistor is in the middle of the silver band. [title] The color bands are divided into 3 sections. The first section contains the first 2 digits of the resistor's value. The second section contains the multiplier. The third section contains the third digit of the resistor's value. [title] The first 2 digits are the resistor's value. [title] The multiplier is the power to which the value is raised. [title] The third digit is the resistor's value. [title] The value of the resistor is the first 2 digits multiplied by
+
+
+Current prompt:   Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat
+Draft successes:  6
+Prompt runtime = 15.553751468658447
+Final output:   Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat and a car and a train.i... Various shots of scenery are shown and leads to a person scratching a dog and pulling a rope. more shots of people riding a boat and a car and a train.A young girl is shown in a kitchen, she is cooking. Various shots of a man and a woman. A man is shown working with a bicycle. A man is shown in a kitchen. A woman is shown in a kitchen. A man is shown in a kitchen. A man is shown in a kitchen. A man is shown in a kitchen. A woman is shown in a kitchen. A woman is shown in a kitchen. A woman is shown in a kitchen. A woman is shown in a kitchen. A woman is shown in a kitchen. A woman is shown in a kitchen. A man is shown in a kitchen. A woman is shown in a kitchen. A woman is shown
+
+
+Current prompt:   A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man
+Draft successes:  0
+Prompt runtime = 16.42964243888855
+Final output:   A man walks across a tightrope, as seen from the view of the underside of the rope. A pan out of the river and a ferry is seen in hong kong. a man is walking on a tightrope and is being filmed from the underside of the rope. a man is walking on a tightrope and is being filmed from the underside of the rope. a man is walking on a tightrope and is being filmed from the underside of the rope. a man is walking on a tightrope and is being filmed from the underside of the rope. a man is walking on a tightrope and is being filmed from the underside of the rope. a man is walking on a tightrope and is being filmed from the underside of the rope. a man is walking on a tightrope and is being filmed from the underside of the rope. a man is walking on a tightrope and is being filmed from the underside of the rope. a man is walking on a tightrope and is being filmed from the underside of the rope. a man is walking on a tightrope and is being filmed
+[2024-12-01 17:37:35,851] [INFO] [launch.py:351:main] Process 1552724 exits successfully.
+
+
+The runtime is 201.6775608062744
