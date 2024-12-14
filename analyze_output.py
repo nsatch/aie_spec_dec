@@ -56,7 +56,8 @@ def compute_average_difference(tensors):
 
 
 # Path to your text file
-output_file_path = '3b_796m_shortened.txt'
+output_file_path = "demo_real_output.txt" # Change this to your output name
+#output_file_path = 'real_test_multi_draft_6.txt'
 
 # Read the tensors from the file
 tensors = read_tensors_from_file(output_file_path)

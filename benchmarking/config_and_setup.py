@@ -36,7 +36,7 @@ def create_test_suite(config):
     print(bnd)
     # TODO: Get rid of class and just use dictionary instead . . .
     # TODO: Add support for lists (so you can have a list of oracle models
-    if bnd['active']:
+    if bnd['active'] and config['demo_target'] == 0:
         testcase = test(bnd['oracle_model'], False, None, None, 0, None)
         tests.append(testcase)
         cprint(CYAN, f"\tAdded baseline no draft test")
@@ -148,8 +148,15 @@ def construct_test(testcase, run_script):
     subprocess.run(f"cd .. && sed -i '/{search_text}/c\\{replace_text}' {run_script}", shell=True)
     test_info = update_test_info(test_info, f"Updating drafter_switch_threshold to {threshold}%")
 
-    return test_info
+    # Update output_file
+    '''
+    search_text = "output_file = "
+    replace_text = f"    output_file = {threshold}"
+    subprocess.run(f"cd .. && sed -i '/{search_text}/c\\{replace_text}' {run_script}", shell=True)
+    test_info = update_test_info(test_info, f"Updating drafter_switch_threshold to {threshold}%")
+    '''
 
+    return test_info
 
 def verify_venv():
     in_venv = sys.prefix != sys.base_prefix

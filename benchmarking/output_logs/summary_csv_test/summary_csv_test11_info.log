@@ -5,4 +5,4 @@ Updating USE_DOUBLE_DRAFTER to True
 Updating draft model one to minghaoyan/Wide-Sheared-LLaMA-290M
 Updating draft model one to minghaoyan/Wide-Sheared-LLaMA-796M
 Updating max_tokens to 3 (number of speculative tokens generated)
-Updating drafter_switch_threshold to 25%
+Updating drafter_switch_threshold to 75%

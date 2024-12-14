@@ -1,3 +1,4 @@
+import subprocess
 import pandas as pd
 import yaml
 import os
@@ -58,6 +59,7 @@ def parse_output_log(output_log_dir):
                 curr_prompt["draft_success"] = int(line.replace("Draft successes: ", ""))
             if "Prompt runtime = " in line:
                 curr_prompt["runtime"] = float(line.replace("Prompt runtime = ", ""))
+                print(f"Run time taken from file {curr_prompt['runtime']}")
                 # Tests without drafter models won't have draft successes
                 if "draft_success" not in curr_prompt.keys():
                     curr_prompt["draft_success"] = None
@@ -76,16 +78,22 @@ def extract_output_log_summary(output_log):
         prompt_runtime = prompt["runtime"]
         if draft_success != None:
             suc_cum += draft_success
-            run_cum += prompt_runtime
+        run_cum += prompt_runtime
     avg_accepted_tokens = suc_cum / len(prompts)
     avg_prompt_runtime = run_cum / len(prompts)
 
     return avg_accepted_tokens, avg_prompt_runtime, total_runtime
 
 
-def add_testcase_to_summary(testcase, output_log, testcases_summary):
-    testcase_success = verify_testcase_status(output_log)
-    avg_accepted_tokens, avg_prompt_runtime, total_runtime = extract_output_log_summary(output_log)
+def add_testcase_to_summary(testcase, output_log, testcases_summary, config):
+    testcase_success = verify_testcase_status(output_log, config)
+    if testcase_success:
+        avg_accepted_tokens, avg_prompt_runtime, total_runtime = extract_output_log_summary(output_log)
+    else:
+        c.cprint(c.RED, "ERROR: TEST CASE FAILED!")
+        avg_accepted_tokens = None
+        avg_prompt_runtime = None
+        total_runtime = None
     new_data = [
                 testcase_success, 
                 testcase.oracle,
@@ -99,6 +107,20 @@ def add_testcase_to_summary(testcase, output_log, testcases_summary):
                 ]
     testcases_summary.append(new_data)
     return testcases_summary
+
+def run_average_script(output_file, output_log):
+    print(f"Trying to run average script")
+    ANALYZE_SCRIPT = "analyze_output.py"
+    '''
+    search_text = "output_file_path = "
+    replace_text = f"output_file_path = {output_file}"
+    subprocess.run(f"cd .. && sed -i '/{search_text}/c\\{replace_text}' {ANALYZE_SCRIPT}", shell=True)
+    '''
+    print(f"output_log = {output_log}")
+    run_command = f"cd .. && python3.9 {ANALYZE_SCRIPT} > '{output_log}'"
+    print(f"Running command: {run_command}")
+    subprocess.run(run_command, shell=True)
+    return
 
 def testcases_summary_to_csv(testcases_summary, output_file_loc):
     cols = [
@@ -116,12 +138,25 @@ def testcases_summary_to_csv(testcases_summary, output_file_loc):
     summary_df.to_csv(output_file_loc, index=False)
     return
 
-def verify_testcase_status(output_log):
+def verify_testcase_status(output_log, config):
+    try:
+        demo_target = config['demo_target']
+    except:
+        c.cprint(c.RED, "WARNING: demo_target not defined in config file.")
+        print("Config file may be old, do you intend to run deployment code?")
     with open(output_log, "r") as f:
         lines = f.read().splitlines()
-        for line in lines:
-            if " exits successfully." in line:
-                return True
-    return False
+        # If running spec_decoding_demo.py
+        if demo_target:
+            for line in lines:
+                if "spec_decoding_demo.py FAILED" in line:
+                    return False
+            return True
+        # If running spec_decoding_final_param.py
+        else:
+            for line in lines:
+                if " exits successfully." in line:
+                    return True
+            return False
 
 # Parse csv into plots

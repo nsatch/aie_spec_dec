@@ -1,0 +1,12 @@
+[2024-11-29 12:36:34,288] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-29 12:36:35,516] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-29 12:36:35,516] [INFO] [runner.py:607:main] cmd = /home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None no_padding_spec_decoding_final.py
+[2024-11-29 12:36:36,554] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-29 12:36:37,767] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-11-29 12:36:37,767] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-11-29 12:36:37,767] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-11-29 12:36:37,767] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-11-29 12:36:37,767] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-11-29 12:36:37,772] [INFO] [launch.py:256:main] process 297026 spawned with command: ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'no_padding_spec_decoding_final.py', '--local_rank=0']
+[2024-11-29 12:36:38,774] [INFO] [launch.py:319:sigkill_handler] Killing subprocess 297026
+[2024-11-29 12:36:38,774] [ERROR] [launch.py:325:sigkill_handler] ['/home/nsatch/cs598aie/aie_spec_dec/ashley_new_code/decoding-speculative-decoding/venvs/spec_dec/bin/python3.9', '-u', 'no_padding_spec_decoding_final.py', '--local_rank=0'] exits with return code = 2

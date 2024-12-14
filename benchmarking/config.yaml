@@ -1,57 +1,33 @@
-#test_name: no_drafter_test_3
-#test_name: no_draft_and_single_draft_test_8_topn_acceptance
-#test_name: test_summary_write
-#test_name: test_double_draft_large_small_swap
-test_name: summary_csv_test
-
-# Input prompts
-# Don't point to an adjusted prompt file. We adjust inside the benchmark script based on size param below!
-#full_prompt_input_file: "prompts/hellaswag.json"
-#stride_enable: 1    # 0 for non-stride (grab top n prompts) 1 for stride (get distribution of diff lenghts)
-#strided_prompt_output_file: "prompts/hellaswag_shortened.json"
-#num_input_prompts: 8
-
-full_prompt_input_file: "prompts/hellaswag_sorted_acceptance.json"
-stride_enable: 0    # 0 for non-stride (grab top n prompts) 1 for stride (get distribution of diff lenghts)
-strided_prompt_output_file: "prompts/hellaswag_sorted_acceptance.json"
-num_input_prompts: 10
-
-# Type of experiment
-# Left most are booleans indicating if that experiment is run
-#   Next indent is the list of drafter models to use 
-#   Pairs listed for double draft (larger draft model, smaller draft model)
-baseline_no_draft: 
-  active: 1
-  oracle_model: 'meta-llama/Llama-3.2-3B'
-
-baseline_single_draft: 
-  active: 1
-  oracle_model: ['meta-llama/Llama-3.2-3B']
-  draft1_model: ['minghaoyan/Wide-Sheared-LLaMA-796M',  'minghaoyan/Wide-Sheared-LLaMA-543M', 'rasyosef/Llama-3.2-180M-Amharic']
-  #draft1_model: ['minghaoyan/Wide-Sheared-LLaMA-796M', 'minghaoyan/Wide-Sheared-LLaMA-543M', 'minghaoyan/Wide-Sheared-LLaMA-290M', 'rasyosef/Llama-3.2-180M-Amharic']
-
-# TODO: Figure out how to group multiple tests together
+baseline_no_draft:
+  active: 0
+  oracle_model: meta-llama/Llama-3.2-3B
+baseline_single_draft:
+  active: 0
+  draft1_model:
+  - minghaoyan/Wide-Sheared-LLaMA-796M
+  - minghaoyan/Wide-Sheared-LLaMA-543M
+  - minghaoyan/Wide-Sheared-LLaMA-290M
+  oracle_model:
+  - meta-llama/Llama-2-70b-hf
+demo_target: 0
 double_draft:
   active: 1
-  oracle_model: ['meta-llama/Llama-3.2-3B']
-  # The ith element of the draft1 and draft2 model are paired together for a single test. It is not a cross product 
-  # of all elements in both lists!
-  #draft1_model: ['minghaoyan/Wide-Sheared-LLaMA-796M','minghaoyan/Wide-Sheared-LLaMA-796M', 'minghaoyan/Wide-Sheared-LLaMA-543M']
-  #draft2_model: ['minghaoyan/Wide-Sheared-LLaMA-290M', 'rasyosef/Llama-3.2-180M-Amharic', 'rasyosef/Llama-3.2-180M-Amharic']
-
-  # Test to see if it makes more sense to use larger drafter model at the start or end of the prompt
-  draft1_model: ['minghaoyan/Wide-Sheared-LLaMA-796M', 'minghaoyan/Wide-Sheared-LLaMA-290M', 'minghaoyan/Wide-Sheared-LLaMA-796M']
-  draft2_model: ['minghaoyan/Wide-Sheared-LLaMA-290M', 'minghaoyan/Wide-Sheared-LLaMA-796M', 'rasyosef/Llama-3.2-180M-Amharic']
-  drafter_switch_threshold: [25, 50, 75]
-
-  # Test to see how sweeping the threshold affects the perf
-  #draft1_model: ['minghaoyan/Wide-Sheared-LLaMA-796M']
-  #draft2_model: ['minghaoyan/Wide-Sheared-LLaMA-290M']
-  #drafter_switch_threshold: [50, 75]
-
-#num_spec_tokens: [1, 5]
-num_spec_tokens: [3, 7]
-#num_spec_tokens: [1,2,3,4,5,7,15]
-
-# Threhold is percent in the prompt
-
+  draft1_model:
+  - minghaoyan/Wide-Sheared-LLaMA-290M
+  - minghaoyan/Wide-Sheared-LLaMA-543M
+  draft2_model:
+  - minghaoyan/Wide-Sheared-LLaMA-543M
+  - minghaoyan/Wide-Sheared-LLaMA-290M
+  drafter_switch_threshold:
+  - 25
+  - 50
+  - 75
+  oracle_model:
+  - meta-llama/Llama-3.2-3B
+full_prompt_input_file: prompts/hellaswag.json
+num_input_prompts: 10
+num_spec_tokens:
+- 3
+stride_enable: 0
+strided_prompt_output_file: prompts/hellaswag_shortened.json
+test_name: real_sdraft_543_290

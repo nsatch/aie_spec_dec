@@ -128,6 +128,8 @@ def oracle_verification(model, input_tensor, draft_output, max_new_tokens, local
         else: 
             first_incorrect = idx[0][0].item()
             new_draft_output = draft_output[0][:-max_new_tokens+first_incorrect].unsqueeze(0)
+            accepted_tokens = new_draft_output[0][-first_incorrect]
+            print("Accepted tokens: ", tokenizer.decode(accepted_tokens, skip_special_tokens=True))
             '''
             print("first incorrect: ", first_incorrect)
             print("new draft output: ", new_draft_output)
@@ -136,6 +138,8 @@ def oracle_verification(model, input_tensor, draft_output, max_new_tokens, local
             return first_incorrect, new_draft_output
     else:
         first_incorrect = max_new_tokens
+        accepted_tokens = draft_output[0][-max_new_tokens]
+        print("Accepted tokens: ", tokenizer.decode(accepted_tokens, skip_special_tokens=True))
         '''
         print("first incorrect: ", first_incorrect)
         print("new draft output: ", draft_output)
@@ -183,7 +187,7 @@ if __name__ == "__main__":
     print(world_size, rank, local_rank)
     os.environ['TRANSFORMERS_CACHE'] = "cache"  # Replace with your transformers cache directory
 
-    test_json = json_loader("benchmarking/prompts/hellaswag_sorted_acceptance_topn_10.json")
+    test_json = json_loader("benchmarking/prompts/hellaswag_shortened_topn_10.json")
 
     # Define the checkpoint dict. You may need to convert *.safetensors to
     # *.bin for this work. Make sure you get all the *.bin and *.pt files in
@@ -218,7 +222,7 @@ if __name__ == "__main__":
     tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-3B", torch_dtype=torch.float16)
 
     # Feel free to change it to the draft model of your choice
-    draft_model = AutoModelForCausalLM.from_pretrained("minghaoyan/Wide-Sheared-LLaMA-796M")
+    draft_model = AutoModelForCausalLM.from_pretrained("minghaoyan/Wide-Sheared-LLaMA-543M")
     draft_model.resize_token_embeddings(len(tokenizer))
 
 
@@ -234,7 +238,7 @@ if __name__ == "__main__":
     # Ashley, please take a look at this and see if this is set up correctly for draft 2
     ### START OF CODE ADDED BY NICK FOR DRAFT 2 ###
     # Feel free to change it to the draft model of your choice
-    draft2_model = AutoModelForCausalLM.from_pretrained("rasyosef/Llama-3.2-180M-Amharic")
+    draft2_model = AutoModelForCausalLM.from_pretrained("minghaoyan/Wide-Sheared-LLaMA-290M")
     draft2_model.resize_token_embeddings(len(tokenizer))
 
 
@@ -264,12 +268,13 @@ if __name__ == "__main__":
     #### END OF CODE ADDED BY NICK FOR DRAFT 2 ####
 
     # Set hyperparameters for speculative decoding
-    max_tokens = 7
+    max_tokens = 3
     output_file = "3b_796m_shortened.txt"
     past_key_values = None
 
     iteration = 0
     for data in test_json:
+        draft_model_ptr = 0
         data_time_start = time()
         # I know this is an ugly way of doing it but I don't want to make fine grained changes
         # and screw up working code :(
@@ -323,7 +328,15 @@ if __name__ == "__main__":
                 # Generate predictions (Nick adds toggle between model)
                 if draft_model_ptr == 0:
                     draft_output = draft_model.generate(input_tensor, max_new_tokens=max_tokens).to(dtype=torch.int32)
+                    '''
+                    print("Input tensor size: ", input_tensor.size(1))
+                    print("Using 1")
+                    '''
                 else:
+                    '''
+                    print("Input tensor size: ", input_tensor.size(1))
+                    print("Using 2")
+                    '''
                     draft_output = draft2_model.generate(input_tensor, max_new_tokens=max_tokens).to(dtype=torch.int32)
                 '''
                 print("Draft output: ", draft_output)
@@ -352,8 +365,8 @@ if __name__ == "__main__":
                 # new_inputs = torch.cat([input_tensor[:, :matched_tokens], generated_tokens[:, :matched_tokens]], dim=-1)
 
                 #print("New inputs: ", new_inputs)
+                # Helpful for DEBUG
                 #print(new_inputs.size())
-
                 total_matched += matched_tokens
                 #print("Total matched: ", total_matched)
 
@@ -374,12 +387,13 @@ if __name__ == "__main__":
             max_length = 200 - max_tokens - 2
 
             current_length = 0
+            input_tensor = tokenizer.encode(current_prompt, return_tensors="pt").cuda(local_rank)
             while current_length < max_length:
                 # Ashley: Commented line below is the OG i was inspired from. Below is my modification.
                 # It's okay to do this since draft and main model use same tokenizer?
                 # Feels right, but the name of draft_input_ids makes me apprehensive
                 #draft_input_ids = tokenizer.encode(current_prompt, return_tensors="pt").cuda(local_rank)
-                input_tensor = tokenizer.encode(current_prompt, return_tensors="pt").cuda(local_rank)
+                # input_tensor = tokenizer.encode(new_input, return_tensors="pt").cuda(local_rank)
 
                 output_len = input_tensor.size(1) + max_tokens
 
@@ -387,8 +401,10 @@ if __name__ == "__main__":
 
                 # Ashley: Is it better to call this multiple times with max_new_token at one or 
                 # just do one call with max_length?
-                target_model_guess = oracle_model.generate(input_ids=input_tensor, max_new_tokens=max_length)
-                current_length = max_length
+                target_model_guess = oracle_model.generate(input_ids=input_tensor, max_new_tokens=1)
+                current_length += 1
+                input_tensor = target_model_guess
+                # print("target model guess: ", input_tensor)
                 '''
                 first_false_position, updated_input = oracle_verification(
                     oracle_model, input_tensor, draft_output, max_tokens, local_rank, iter_count, past_key_values
